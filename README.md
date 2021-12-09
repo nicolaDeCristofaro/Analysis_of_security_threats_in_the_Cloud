@@ -4,9 +4,8 @@
 The Cloud Computing paradigm is considered one of the most important paradigm shifts, in the technological field, in recent years. Its remarkable growth is mainly due to the opportunity it offers users to reduce costs and at the same time increase the efficiency of applications by providing a new approach to using services. In fact, one of the main features of the Cloud is the ability to pay only for the resources actually used and thus avoid large initial investments. However, despite the numerous advantages offered, there are still security issues that are perceived as the main obstacle to the massive adoption of the Cloud. In this study we analyze the main security and privacy threats in the Cloud, and the related countermeasures adopted to achieve a reliable Cloud environment. In particular, we will refer to the security mechanisms used by the most used Cloud Providers: Amazon Web Services and Microsoft Azure. Furthermore, a real case study of an attack on a Cloud Provider will be presented with the relative details to understand the level of associated risk, and finally we will make an overview on the use of the blockchain in combination with the Cloud to understand which added values ​​it manages to achieve.
 
 ## Index
-### 1. [Introduction on Cloud and Cloud Security](#chap1)
-
-	- What is the Cloud in short
+### 1. Introduction on Cloud and Cloud Security
+	- [What is the Cloud in short](#chap1_cloud_def)
 	- The main benefits of the cloud
 	- Statistics on percentages of use in the last year (or the year before the pandemic)
 
@@ -46,7 +45,7 @@ The Cloud Computing paradigm is considered one of the most important paradigm sh
 
 7. **Conclusions**
 
-## 2.Security and Privacy threats in the Cloud <a name="chap2"></a>
+## 2.Security and Privacy threats in the Cloud <a name="#chap1_cloud_def"></a>
 Although we have seen the potential advantages of the Cloud, its use or rather its adoption is often a source of doubts, especially in contexts where the data processed is particularly sensitive. The reason is that, in addition to the benefits, there are also security and privacy concerns that comes with the use of the Cloud. Below we analyze this type of problems.
 
 
