@@ -9,11 +9,11 @@ The Cloud Computing paradigm is considered one of the most important paradigm sh
 - What is the Cloud in short 
 - Some Statistics
 - The main benefits of the Cloud
+
+### 2. [Security and Privacy threats in the Cloud](#chap2)
 - Introduction to Cloud Security
   - Extensibility & Shared Responsibility
   - Service Level Agreement (SLA)
-
-### 2. [Security and Privacy threats in the Cloud](#chap2)
 - Threats Agents
 - Outsourcing of data and computation
   - Traffic Eavesdropping
@@ -21,7 +21,8 @@ The Cloud Computing paradigm is considered one of the most important paradigm sh
 - Denial of Service
 - Authentication and Identity Management
   - Insufficient Authorization
-- Virtualization Attack
+- Access Control
+- Virtualization & Hypervisor
 - Trust Management 
   - Overlapping Trust Boundaries
 - Privacy and Data Protection
@@ -79,14 +80,89 @@ We can therefore see that even if in different proportions the Cloud is widespre
 
 Cloud Advantages in short
 
+## 2. Security and Privacy threats in the Cloud <a name="chap2"></a>
 
 #### Introduction to Cloud Security
-However, without appropriate security and privacy solutions designed for clouds, this potentially disrupting computing paradigm could become a huge failure. Several surveys of potential Cloud adopters indicate that security and privacy is the primary concern hindering its adoption.
+Although we have seen the potential advantages of the Cloud, its use or rather its adoption is often a source of doubts, especially in contexts where the data processed is particularly sensitive. The reason is that, in addition to the benefits, there are also security and privacy concerns that comes with the use of the Cloud. So, without appropriate security and privacy solutions designed for clouds, this potentially disrupting computing paradigm could become a huge failure. Several surveys of potential Cloud adopters indicate that security and privacy is the primary concern hindering its adoption.
+
+Let's first introduce some security concepts that are specific to the Cloud environment that it is important to be aware of.
+
+- **Extensibility & Shared Responsibility**
+Cloud providers and customers must share the responsibility for security and privacy in cloud computing environments, but sharing levels will differ for different Cloud delivery models:
+  -
+- **Service Level Agreement (SLA)**
 
 
+Before moving on to analyze the various Cloud security issues, we can distinguish the types of attackers:
 
-## 2. Security and Privacy threats in the Cloud <a name="chap2"></a>
-Although we have seen the potential advantages of the Cloud, its use or rather its adoption is often a source of doubts, especially in contexts where the data processed is particularly sensitive. The reason is that, in addition to the benefits, there are also security and privacy concerns that comes with the use of the Cloud. Below we analyze this type of problems.
+- **Anonymous Attacker**: An anonymous user, consumer of cloud services with no permissions in the cloud. It typically exists as an external software program that launches network-level attacks across public networks. Anonymous attackers often resort to committing acts such as bypassing user accounts or stealing user credentials, using methods that ensure anonymity.
+
+- **Malicious Service Agent**: A malicious service agent is able to intercept and forward network traffic flowing within a cloud. It typically exists as a program that pretends to be a service agent with malicious logic. It can also exist as an external program that can remotely intercept and potentially corrupt the message content.
+
+- **Trusted Attacker**: A trusted attacker shares IT resources in the same cloud environment as the cloud consumer and attempts to exploit legitimate credentials to target cloud providers with whom they share IT resources (*Attack from the inside*). Unlike anonymous attackers (who are not "trusted"), trusted attackers usually launch their attacks from inside the trusted boundaries of a cloud by abusing legitimate credentials or by stealing sensitive and confidential information. Examples: weak authentication processes, breaking of a cryptographic mechanism, DDoS ...
+
+- **Malicious Insider**: These are usually human insiders, at the cloud service provider. They are typically current or former employees or third parties with access to the cloud provider's premises. This type of threat agent carries enormous potential for harm, as the malicious insider may have administrative privileges to access the IT resources of cloud consumers.
+
+Now we can go into the details of the problems and threats of the Cloud, then in the next chapter we will provide the relative countermeasures adopted.
+
+#### Outsourcing of data and computation
+Cloud computing provides access to data, but the challenge is to ensure that only authorized entities can gain access to it. When we use cloud environments, we rely on third parties to make decisions about our data and platforms in ways never seen before in computing. It’s critical to have appropriate mechanisms to prevent cloud providers from using customers’ data in a way that hasn’t been agreed upon.
+
+Examples of attacks in this category could be:
+  - **Traffic Eavesdropping**: Traffic interception occurs when data transferred within a cloud (usually from the consumer to the cloud provider) is passively intercepted by a malicious service agent for illegitimate information-gathering purposes. The purpose of this attack is to directly compromise the confidentiality of the data and, possibly, the confidentiality of the relationship between the consumer and the cloud provider. Due to the passive nature of the attack, it can more easily go unnoticed for long periods of time.
+  - **Malicious Intermediary**: This type of threat occurs when messages are intercepted and altered by a malicious service agent, thus potentially compromising the confidentiality and / or integrity of the message. It can also insert malicious data into the message before forwarding it to its destination.
+
+#### Denial of Service
+The goal of the Denial of Service (DoS) attack is to overload IT resources to the point where they cannot function properly. This form of attack is commonly launched in one of the following ways:
+- The workload on cloud services has artificially increased with imitation of messages or repeated communication requests.
+- The network is overloaded with traffic to reduce its responsiveness and paralyze its performance.
+- Multiple requests for cloud services are sent, each of which is designed to consume excessive memory and processing resources.
+  
+Successful DoS attacks result in server degradation and / or failure.
+
+#### Authentication, Identity Management 
+The conventional and the easiest way of authentication for a user that wants to use cloud services, is via password, something that is shared between the user and the authentication service and is, ideally, both secret and hard to guess. Identity management systems are responsible for the storage, management and secure transmission of user ID and password to the authentication service for verification. 
+
+In a common Cloud hosted web-service access scenario, user enters his user ID and password to prove his identity to the authentication server. However, this mechanism is the least secure authentication mechanism for the dynamic Cloud environment that is susceptible to replay attack and identity theft since user passwords can easily be stolen. Other reasons might include sharing of passwords or usage of overly simplistic passwords among many others.
+
+An example of attack in this category is:
+  - **Insufficient Authorization**
+    - This attack occurs when access is granted to an attacker incorrectly or with too wide privileges, resulting in the attacker gaining access to IT resources that are normally protected. A variant of this attack, known as Weak Authentication, can occur when weak passwords or shared accounts are used.
+
+#### Access Control
+In many application scenarios, such as those in enterprises or organizations, users’ access to data is usually selective and highly differentiated. Different users enjoy different access privileges with regard to the data. When data are outsourced to the cloud, enforcing secure, efficient, and reliable data access among a large number of users is thus critical. 
+
+Traditionally, to control the dissemination of privacy-sensitive data, users establish a trusted server to store data locally in clear, and then control that server to check whether requesting users present proper certification before letting them access the data. From a security standpoint, this access control architecture is no longer applicable when we outsource data to the cloud. Because data users and cloud servers aren’t in the same trusted domain, the server might no longer be fully trusted as an omniscient reference monitor9 for defining and enforcing access control policies and managing user details. In the event of either server compromise or potential insider attacks, users’ private data might even be exposed.
+
+#### Virtualization & Hypervisor
+Virtualization is an important enabling technology that helps abstract infrastructure and resources to be made available to clients as isolated VMs. A hypervisor or VM monitor is a piece of software that lets multiple operating systems run on a host computer concurrently. 
+
+In other words, the virtualization and hypervisor combination provides multiple cloud users with access to IT resources that share the underlying hardware but are logically isolated from each other.
+
+Although this provides a means to generate virtualized resources for sharing, such technology’s presence also increases the attack surface. We need mechanisms to ensure strong isolation, and secure communications between VMs.
+
+An example of attack in this category is:
+- **Virtualization Attack**
+  - As cloud providers grant cloud consumers administrative access to virtualized IT resources (such as virtual servers), there is an inherent risk that cloud consumers may abuse this access to attack underlying physical IT resources. A Virtualization Attack exploits vulnerabilities in the virtualization platform to compromise its confidentiality, integrity and / or availability.A successful virtualization attack can have significant repercussions on all other users who use virtualized resources on the attacked physical hardware.
+
+#### Overlapping Trust Boundaries
+If physical IT assets within a cloud are shared by multiple consumers of cloud services, we say these consumers have overlapping boundaries of trust.
+
+Malicious cloud consumers can target shared IT resources with the intention of compromising other consumers. The consequence is that some or all of the other consumers of cloud services could be affected by the attack and the attacker could use virtual IT resources of users with whom they share the same border of trust.
+  
+### Privacy and Data Protection
+Privacy is a core issue in all the challenges we’ve discussed so far.. Many organizations aren’t comfortable storing their data and applications on systems that reside outside of their on-premise datacenters. This might be the single greatest fear of cloud clients. By migrating workloads to a shared infrastructure, customers’ private information faces increased risk of potential unauthorized access and exposure. 
+
+Cloud service providers must assure their customers and provide a high degree of transparency into their operations and privacy assurance. Privacy-protection mechanisms must be embedded in all security solutions. 
+
+In a related issue, it’s becoming important to know who created a piece of data, who modified it and how, and so on. Provenance information could be used for various purposes such as traceback, auditing, and history-based access control. Balancing between data provenance and privacy is a significant challenge in clouds where physical perimeters are abandoned.
+
+#### Security Policy Disparity
+When a cloud consumer entrusts IT resources to a public cloud provider, they may have to accept that their traditional approach to information security may not be identical or even similar to that of the cloud provider.
+
+Even when hiring IT resources based on raw infrastructure, the cloud consumer may not be granted sufficient administrative control or influence over the security policies that apply to the cloud provider's IT resources.
+
+This is mainly due to the fact that these IT assets are still legally owned by the cloud service provider and continue to fall under its responsibility. Additionally, with some public clouds, additional third parties, such as security brokers and certification authorities, can introduce their own distinct set of security policies and practices, further complicating any attempt to standardize the protection of cloud consumers' resources.
 
 ## 3. Countermeasures to Cloud Security Threats <a name="chap3"></a>
 
