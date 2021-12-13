@@ -29,8 +29,8 @@ The Cloud Computing paradigm is considered one of the most important paradigm sh
 - Security Policy Disparity
   
 ### 3. [Countermeasures to Cloud Security Threats](#chap3)
-- Encryption + type of encryption used in cloud
-- Hashing
+- [Encryption](#encryption)
+- [Hashing](#hashing)
 - Digital Signature
 - Public Key Infrastructure (PKI)
 - Identity and Access Management
@@ -165,12 +165,152 @@ Even when hiring IT resources based on raw infrastructure, the cloud consumer ma
 This is mainly due to the fact that these IT assets are still legally owned by the cloud service provider and continue to fall under its responsibility. Additionally, with some public clouds, additional third parties, such as security brokers and certification authorities, can introduce their own distinct set of security policies and practices, further complicating any attempt to standardize the protection of cloud consumers' resources.
 
 ## 3. Countermeasures to Cloud Security Threats <a name="chap3"></a>
+What techniques are used as countermeasures to the vulnerabilities in the Cloud identified in the previous section? Here are some of them:
 
+#### Encryption
+
+The data, by default, is in a human-readable format known as plain text. When transmitted over a network, plaintext is vulnerable to unauthorized and potentially harmful access. The encryption mechanism is a digital encryption system dedicated to preserving the confidentiality and integrity of the data. It is used to encode plain text data in a secure format that is unreadable by unauthorized users.
+
+Encryption technology commonly relies on a standardized algorithm called a cipher to transform the original plaintext data into encrypted data, referred to as ciphertext.
+
+The data is associated with a character string called an encryption key, a secret message established and shared between authorized parties. The encryption key is used to decrypt the ciphertext into its original plaintext format.
+
+The encryption mechanism can help counter cloud security threats such as:
+- Traffic eavesdropping
+- malicious intermediaries
+- insufficient authorization
+- overlapping trust boundaries
+ 
+There are two common forms of encryption known as symmetric encryption and asymmetric encryption.
+
+I won't go into the details of both techniques, but we can say that the basic difference between these two types of encryption is that symmetric encryption uses one key for both encryption and decryption, and the asymmetric encryption uses public key for encryption and a private key for decryption.
+
+#### Hashing
+The hashing mechanism is used when a one-way, non-reversible form of data protection is required. Once hashing has been applied to a message, it is blocked and no key is given to unlock the message. **A common application of this mechanism is the storage of passwords.**
+
+Hashing technology can be used to derive a hashing code or digest from a message, which is often of a fixed length and smaller than the original message. The sender of the message can then use the hashing mechanism to attach the message digest to the message.
+
+The recipient applies the same hash function to the message to verify that the digest of the produced message is identical to the one that accompanied the message. Any modification to the original data results in a completely different message digest and clearly indicates that a tamper has occurred.
+
+In addition to its use to protect stored data, cloud threats that can be mitigated by the hashing mechanism include
+
+- malicious intermediaries
+- insufficient authorization
+
+#### Digital Signature
+
+The digital signature mechanism is a means of providing authenticity and data integrity through authentication and non-repudiation. A message is digitally signed before transmission, which is then rendered invalid if the message undergoes subsequent unauthorized modification. 
+
+A digital signature provides proof that the received message is the same as the one created by its legitimate sender.
+
+Both hashing and asymmetric encryption are involved in creating a digital signature, which essentially exists as a digest of the message that has been encrypted by a private key and appended to the original message.
+
+The recipient verifies the validity of the signature and uses the corresponding public key to decrypt the digital signature, which produces the message digest. The hashing mechanism can also be applied to the original message to produce this digest message. Identical results from the two different processes indicate that the message has maintained its integrity.
+ 
+The digital signature mechanism helps mitigate security threats
+- malicious intermediaries
+- insufficient authorization
+- overlapping trust boundaries
+
+#### Public Key Infrastructure (PKI)
+A common approach to managing asymmetric key issuance is based on the Public Key Infrastructure (PKI) mechanism, which exists as a system of protocols, data formats, rules and practices that allow systems to use securely public key cryptography.
+
+This system is used to bind public keys to their respective key owners (known as public key identification) while allowing verification of the validity of the key. PKIs rely on the use of digital certificates, which are digitally signed data structures that bind public keys to the identities of the certificate owner, as well as related information, such as validity periods.
+
+Digital certificates are typically digitally signed by a third-party certification authority (CA).
+
+Larger organizations, such as Microsoft, can act as their own CA and issue certificates to their customers and the public, as individual users can also generate certificates as long as they have the appropriate software tools.
+
+Threats mitigated:
+- insufficient authorization
+
+#### Identity and Access Management (IAM)
+This mechanism includes the components and policies needed to control and track user identities and access privileges for IT systems, environments and resources.
+
+Specifically, IAM mechanisms exist as systems composed of four main components:
+
+- **Authentication**: Username and password combinations remain the most common forms of user authentication credentials managed by the IAM system, which can also support digital signatures, digital certificates, biometric hardware, and so on. We can say this component tries to respond the question WHO ARE YOU?.
+  
+- **Authorization**: Defines the correct granularity for access and privilege controls. It respond to the question WHAT CAN YOU DO?
+
+- **User Management**: The user management program is responsible for creating new users and access groups (each cloud consumer can have several associated users with relative privileges), resetting passwords, defining password policies and managing privileges.
+
+- **Credential Management**: The credential management system establishes the identities and access control rules for defined user accounts.
+
+Although the objectives are similar to those of the PKI mechanism, the scope of implementation of the IAM mechanism is distinct because its structure includes access controls and policies as well as the assignment of specific levels of user privileges.
+
+Threats mitigated:
+- insufficient authorization
+- overlapping trust boundaries
+- DDoS
+
+#### Single Sign-On (SSO)
+Propagating authentication and authorization information for a consumer cloud across multiple cloud services can be a challenge, especially if you need to invoke multiple cloud services as part of the same overall runtime task.
+
+The Single Sign-on (SSO) mechanism allows cloud consumer to be authenticated by a security broker, which establishes a security context that is maintained while the cloud services consumer accesses other cloud services.
+
+Otherwise, the consumer of the cloud service would have to re-authenticate with each subsequent request.
+
+The credentials initially provided by the cloud service consumer remain valid for the duration of a session, while their security context information is shared.
+
+The SSO mechanism security broker is particularly useful when a consumer of cloud services needs to access cloud services that reside on different clouds.
+
+* This mechanism does not counteract any of the cloud threats we have seen, but mainly improves usability in accessing and managing cloud resources.*
+
+#### Cloud-Based Security Groups
+Cloud resource segmentation is accomplished which is a process by which separate physical and virtual IT environments are created for different users and groups. For example, an organization's WAN can be partitioned based on individual network security requirements. One network can be established with a resilient firewall for external Internet access, while a second is implemented without a firewall because its users are internal and cannot access the Internet.
+
+The cloud-based resource segmentation process creates security groups determined by security policies. Networks are segmented into security groups that form the logical network perimeters. Each cloud-based IT resource is assigned to at least one security group.
+
+Each security group is assigned specific rules that govern communication between security groups. For example, multiple virtual servers running on the same physical server can become members of different security groups.
+
+Virtual servers can be further separated into public-private groups, dev-production groups, or any other designation configured by the cloud resource administrator.
+
+Threats mitigated:
+- Unauthorized access to cloud resources
+- overlapping trust boundaries
+- insufficient authorization
+- DDoS
+
+#### Hardened Virtual Server Images
+A virtual server in the Cloud is created from a template configuration called a *virtual server image*.
+
+Hardening virtual server image is the process of removing unnecessary software from a system to limit potential vulnerabilities that can be exploited by attackers. Removing redundant programs, closing unnecessary server ports, and disabling unused services, internal root accounts, and guest access are all examples of hardening.
+
+A secure virtual server image is a template for creating virtual server instances that has undergone a hardened process. This generally results in a virtual server template that is significantly more secure than the original standard image.
+
+Threats mitigated:
+- overlapping trust boundaries
+- insufficient authorization
+- DDoS
+  
 ## 4. Security services of the main Cloud Providers <a name="chap4"></a>
 
 ## 5. Analysis of a real case study: attack to Tesla <a name="chap5"></a>
 
 ## 6. Blockchain and Cloud Security <a name="chap6"></a>
+
+#### What is blockchain technology?
+The concept of blockchain gained mainstream attention in 2017. In simple terms, blockchain is a technology that enables data to be stored and transferred on a peer-to-peer basis. It can also be compared to a bank ledger holding transactions. It stores information about date, time, and amount of money, etc. It’s used in a ‘decentralised’ manner and it eliminates the need for ‘trusted third parties’. The blockchain network doesn’t have any central authority. So, we can say that blockchain technology created the cornerstone of a new kind of internet.
+
+A particular property of the blockchain is: *"The data structure in a blockchain is append-only: the data cannot be modified or deleted"*.
+
+#### Where blockchain technology comes handy?
+The modern digital economy is based on reliance on a certain trusted authority. Simply put, the online transactions we make rely on trusting someone to tell us the truth. For example, when we send an email to somebody we need the provider to tell us that the email is delivered. The point is that we live our life rather uncertainly in the digital world by relying on a third entity for the security of our digital assets. The bad news is that these so-called third-party sources can be infiltrated.
+
+Blockchain technology has the extensive potential to fundamentally transform the digital world by facilitating a distributed consensus. It means that every single transaction, whether be it past and present, including digital assets, can be checked at any time in the future. Better yet, it implements this without compromising the security of digital assets.
+
+#### Blockchain security in cloud computing
+How can we use blockchain and cloud computing for additional value creation? Let's take a look at a conceptual model of a fusion between the two technologies in exam: blockchain and cloud computing.
+
+Specifically this model is called **Blockchain-Cloud Fusion (BCF) model**. 
+
+In this model who is deployed over whom? There are three types of deployment: 
+
+//TODO
+look at "Blockchain meets Cloud"
+
+
 
 ## 7. Conclusions <a name="conclusions"></a>
 
