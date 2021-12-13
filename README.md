@@ -11,22 +11,20 @@ The Cloud Computing paradigm is considered one of the most important paradigm sh
 - [The main benefits of the Cloud](#the-main-benefits-of-the-cloud)
 
 ### 2. [Security and Privacy threats in the Cloud](#chap2)
-- Introduction to Cloud Security
+- [Introduction to Cloud Security](#introduction-to-cloud-security)
   - Extensibility & Shared Responsibility
-  - Service Level Agreement (SLA)
-- Threats Agents
-- Outsourcing of data and computation
+- [Threats Agents](#threats-agents)
+- [Outsourcing of data and computation](#outsourcing-of-data-and-computation)
   - Traffic Eavesdropping
   - Malicious Intermediary
-- Denial of Service
-- Authentication and Identity Management
+- [Denial of Service](#denial-of-service)
+- [Authentication and Identity Management](#authentication-identity-management)
   - Insufficient Authorization
-- Access Control
-- Virtualization & Hypervisor
-- Trust Management 
-  - Overlapping Trust Boundaries
-- Privacy and Data Protection
-- Security Policy Disparity
+- [Access Control](#access-control)
+- [Virtualization & Hypervisor](#virtualization--hypervisor)
+- [Trust Management: Overlapping Trust Boundaries](#overlapping-trust-boundaries)
+- [Privacy and Data Protection](#privacy-and-data-protection)
+- [Security Policy Disparity](#security-policy-disparity)
   
 ### 3. [Countermeasures to Cloud Security Threats](#chap3)
 - [Encryption](#encryption)
@@ -107,11 +105,12 @@ Although we have seen the potential advantages of the Cloud, its use or rather i
 Let's first introduce some security concepts that are specific to the Cloud environment that it is important to be aware of.
 
 - **Extensibility & Shared Responsibility**
-Cloud providers and customers must share the responsibility for security and privacy in cloud computing environments, but sharing levels will differ for different Cloud delivery models:
-  -
-- **Service Level Agreement (SLA)**
+Cloud providers and customers must share the responsibility for security and privacy in cloud computing environments, but sharing levels will differ for different Cloud delivery models where a cloud delivery model represents a specific combination of IT resources offered by a Cloud Provider:
+  - With **SaaS (Software as a Service)**, the Cloud provider manages both the software and the underlying infrastructure. Users access the service over the Internet, usually through a web browser. In this scenario, the Cloud Provider is more responsible for the security and privacy of application services.
+  - **PaaS (Platform as a Service)** represents a "ready to use" environment that typically includes IT resources already configured and deployed. PaaS is designed to make application development quick and easy, without the worry of setting up and managing the underlying infrastructure of servers, storage, networks, etc. Obviously, this way you more control of resources than in SaaS but not the full control. Thus, customers are primarly responsible for protecting the applications they build and run on the platform. Providers are then responsible for isolating the customers' applications and workspaces from one another.
+  - The **IaaS (Infrastructure as a Service)** model represents a self-contained IT environment composed of infrastructure-centric IT resources, accessible and fully managed by the consumer cloud. This environment can include hardware, networking, connectivity, and other "raw" IT resources. In this scenario It is expected that the consumers secure the operating systems, applications, and content. The Cloud Provider still must provide some basic, low-level data protection capabilities.
 
-
+#### Threats Agents
 Before moving on to analyze the various Cloud security issues, we can distinguish the types of attackers:
 
 - **Anonymous Attacker**: An anonymous user, consumer of cloud services with no permissions in the cloud. It typically exists as an external software program that launches network-level attacks across public networks. Anonymous attackers often resort to committing acts such as bypassing user accounts or stealing user credentials, using methods that ensure anonymity.
