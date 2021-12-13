@@ -42,11 +42,12 @@ The Cloud Computing paradigm is considered one of the most important paradigm sh
 - Overview of mechanisms adopted by Microsoft Azure
   
 ### 5. [Analysis of a real case study: attack to Tesla](#chap5)
-- Details of the attack
-- Impact of the attack
-- Preventive mitigation actions
-- Investigative mitigation actions
-- Corrective mitigation actions
+- [Attack Details](#attack-details)
+- [Technical Impacts](#technical-impacts)
+- [Business Impacts](#business-impacts)
+- [Preventive mitigation actions](#preventive-mitigation)
+- [Detective mitigation actions](#detective-mitigation)
+- [Corrective mitigation actions](#corrective-mitigation)
 
 ### 6. [Blockchain and Cloud Security](#chap6)
 - x
@@ -305,6 +306,44 @@ Threats mitigated:
 ## 4. Security services of the main Cloud Providers <a name="chap4"></a>
 
 ## 5. Analysis of a real case study: attack to Tesla <a name="chap5"></a>
+This is a real-world case study attack.and breaches cited in the Top Threats Deep Dive for its foundation. We'll provide an attack-style synopsis of the actor spanning from threats and vulnerabilities to end controls and mitigations.
+
+#### Attack Details
+- **Actor**: *External malicious hacker(s)* gained access to an unsecured Kubernetes administrative interface. This was discovered by security researchers and reported to Tesla.
+  
+- **Attack**: The attackers gained access to AWS access credentials via the unsecured Kubernetes administrative interface. These credentials further provided access to S3 buckets containing non-public vehicle telemetry data. In addition, the attackers installed mining scripts on the hijacked Kubernetes instance to mine cryptocurrency.
+  
+- **Vulnerabilities**: Misconfiguration of secure authentication mechanisms within the Kubernetes console provided access to confidential data including credentials.
+  - Insufficient credential management and effective encryption measures possibly facilitated lateral movement across the network.
+  - Inadequate antimalware and security monitoring failed to detect and prevent the installation of mining scripts.
+
+#### Technical Impacts
+- **Data Breach**: The attackers were able to gain access to AWS S3 buckets housing intellectual property related to internally-used engineering test cars.
+- **Malware infection**: The intrusion allowed the attackers to install evasive cryptocurrency mining scripts. In addition to steaking computing resources, these nefarious scripts provide an avenue for attackers to persist within the environment if not properly detected and remediated
+
+#### Business Impacts
+- **Financial**: Possible increases in the cost of cloud computing resources could be realized depending on the length of time the attackers spent mining crypto currency within the compromised network: possible risk of exfiltrating and selling valuable intellectual property to highest bidding competitor.
+- **Operational**: Time and effort taken by the Digital Forensic and Incident Response (DFIR) team to manage malware infections, revoke access credentials and ensure reconfiguration of the Kubernetes administrative instance.
+- **Compliance:** This attack may not have direct impacts from non compliance since confidential data such as customer PII was not exposed. However, there was a loss of confidentiality of sensitive data that could be possibly related to trade secrets.
+- **Reputational**: The data breach may have led to a reduction of consumer confidence and a diminished perception of brand value.
+
+#### Preventive Mitigation
+- **Unauthorized Software Installations** – Organizations should have application whitelisting policies in place to restrict the installation of unauthorized software (including malware) on end-points and servers.
+- **Sensitive Data Protection** – Encryption should be enforced for sensitive data in stored in the cloud. CSPs should provide customers with the option to select client side or server-side encryption. Where possible, customers should select encryption mechanisms that complement the value and use of data being protected.
+- **Credential Lifecycle/Provision Management** – Establishment of user access control policies supporting business processes and technical controls that ensure appropriate identity and access management for all users with access to data.
+- **Employee training** – Intelligence driven security awareness training should be provided to DevOps teams on secure development practices. This can help mitigate the risk of security misconfiguration.
+- **Vulnerability / Patch Management** – Timely detection of weaknesses within configurations of applications, infrastructure, network and system components can ensure efficacy of implemented security controls. For example, penetration testing of applications can reveal the presence of weak authentication mechanisms that need to be corrected before being exploited by attackers.
+
+#### Detective Mitigation
+- **Quality Testing** – Organizations should have defined change control and testing processes to test applications and before being deployed into production. This can help in detecting misconfigured services that can affect the confidentiality, integrity and availability of systems and services.
+- **Audit Logging / Intrusion Detection** – CSP’s should provide customer’s the capability to detect potentially suspicious network behaviours/ anomalies within their environment. Furthermore, the CSP needs to ensure the confidentiality, integrity and availability of audit logs are maintained at all times to aid forensic investigations.
+- **Anti-Virus / Malicious Software** – Some endpoint detection and response (EDR) solutions are capable of detecting and mitigating the effects of malware intrusions. Although not fully encompassing, these solutions at the very least can help in detecting and preventing the execution of commodity malware or publicly known tools which are still currently being used in the wild by adversaries.
+  
+
+#### Corrective Mitigation
+- **Incident Management** – An Incident Response Team will be required to triage/investigate suspicious security events and ensure timely and thorough management of incidents, as established within the Incident Response process.
+- **Incident Response Metrics** – Each incident should be tracked in order to provide justification for time and resources spent to manage incidents. This will aid Management in making investment decisions needed to improve the Incident Response process.
+
 
 ## 6. Blockchain and Cloud Security <a name="chap6"></a>
 
