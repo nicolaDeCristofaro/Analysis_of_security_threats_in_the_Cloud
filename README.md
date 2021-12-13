@@ -6,9 +6,9 @@ The Cloud Computing paradigm is considered one of the most important paradigm sh
 ## Index
 
 ### 1. [Introduction on Cloud and Cloud Security](#chap1)
-- What is the Cloud in short 
-- Some Statistics
-- The main benefits of the Cloud
+- [What is the Cloud in short](#what-is-cloud-in-short)
+- [Some Statistics](#some-statistics)
+- [The main benefits of the Cloud](#the-main-benefits-of-the-cloud)
 
 ### 2. [Security and Privacy threats in the Cloud](#chap2)
 - Introduction to Cloud Security
@@ -31,12 +31,12 @@ The Cloud Computing paradigm is considered one of the most important paradigm sh
 ### 3. [Countermeasures to Cloud Security Threats](#chap3)
 - [Encryption](#encryption)
 - [Hashing](#hashing)
-- Digital Signature
-- Public Key Infrastructure (PKI)
-- Identity and Access Management
-- Single Sign-on (SSO)
-- Cloud-Based Security Groups
-- Hardened Virtual Server Images
+- [Digital Signature](#digital-signature)
+- [Public Key Infrastructure (PKI)](#public-key-infrastructure-pki)
+- [Identity and Access Management](#identity-and-access-management-iam)
+- [Single Sign-on (SSO)](#single-sign-on-sso)
+- [Cloud-Based Security Groups](#cloud-based-security-groups)
+- [Hardened Virtual Server Images](#hardened-virtual-server-images)
 
 ### 4. [Security services of the main Cloud Providers](#chap4)
 - Usage statistics of the main Cloud Providers
@@ -78,7 +78,26 @@ According to predictions from Gartner, global spending on cloud services is expe
 #### The main benefits of the Cloud
 We can therefore see that even if in different proportions the Cloud is widespread and used in every part of the world. This is due to the great advantages that the cloud offers, which we summarize below:
 
-Cloud Advantages in short
+- **Reduced initial investment**: similar to a product wholesaler who buys wholesale goods at lower prices, public cloud providers base their business model on the mass acquisition of IT resources which are then made available to cloud consumers at advantageous prices. This opens the door for organizations to gain access to a powerful infrastructure without having to purchase it themselves.
+
+The most common economic reason for investing in cloud-based IT resources is the reduction or permanent elimination of initial IT investments, i.e. initial hardware and software purchases. This elimination or minimization of initial financial commitments allows companies to start small and consequently increase the allocation of IT resources as needed.
+Furthermore, the reduction of the initial capital allows to redirect the capital towards other core areas of the business.
+
+Other benefits related to cost reduction are:
+  - On-demand access to short-term pay-as-you-go computing resources (such as hourly processors) and the ability to release these computing resources when they are no longer needed.
+  - The perception of having unlimited processing resources available on demand, thus reducing the need for in-depth capacity planning.
+  - The ability to add or remove IT resources at a fine-grained level, for example by changing available storage disk space in single gigabyte increments.
+  - Infrastructure abstraction so that applications are not stuck in devices or locations and can be easily moved if needed.
+
+- **Increased Scalability**: Cloud platforms allow you to instantly and dynamically allocate IT resources, on demand. This allows cloud consumers to scale their cloud-based IT resources to meet fluctuations and processing spikes automatically or manually. Likewise, cloud-based IT resources can be released (automatically or manually) as processing demands decrease.
+
+- **Increased Availability and Reliability**: By leveraging cloud environments to make IT resources highly available and reliable, organizations are able to increase customer service quality guarantees and further reduce or avoid potential business losses arising from unexpected runtime errors.
+
+In particular:
+  - An IT resource with higher availability is accessible for longer periods of time (for example, 22 hours on a 24 hour day). Providers generally offer "resilient" IT resources for which they can guarantee high levels of availability.
+  - A more reliable IT resource can avoid and recover exceptional failure situations. The modular architecture of cloud environments provides extensive failover support that increases reliability.
+
+It is important for organizations to carefully review the SLAs offered by cloud service providers when considering leasing cloud-based services and IT resources.
 
 ## 2. Security and Privacy threats in the Cloud <a name="chap2"></a>
 
