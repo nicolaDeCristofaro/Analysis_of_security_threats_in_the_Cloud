@@ -50,7 +50,7 @@ The Cloud Computing paradigm is considered one of the most important paradigm sh
 - [Corrective mitigation actions](#corrective-mitigation)
 
 ### 6. [Blockchain and Cloud Security](#chap6)
-- x
+- Blockchain-as-a-Service (BaaS)
 - y
 
 ### 7. [Conclusions](#conclusions)
@@ -348,7 +348,7 @@ This is a real-world case study attack.and breaches cited in the Top Threats Dee
 ## 6. Blockchain and Cloud Security <a name="chap6"></a>
 
 #### What is blockchain technology?
-The concept of blockchain gained mainstream attention in 2017. In simple terms, blockchain is a technology that enables data to be stored and transferred on a peer-to-peer basis. It can also be compared to a bank ledger holding transactions. It stores information about date, time, and amount of money, etc. It’s used in a ‘decentralised’ manner and it eliminates the need for ‘trusted third parties’. The blockchain network doesn’t have any central authority. So, we can say that blockchain technology created the cornerstone of a new kind of internet.
+The concept of blockchain gained mainstream attention in 2017. In simple terms, blockchain is a technology that enables data to be stored and transferred on a peer-to-peer basis. It can also be compared to a bank ledger holding transactions. It stores information about date, time, and amount of money, etc. It’s used in a ‘decentralised’ manner and it eliminates the need for ‘trusted third parties’. The blockchain network doesn’t have any central authority.
 
 A particular property of the blockchain is: *"The data structure in a blockchain is append-only: the data cannot be modified or deleted"*.
 
@@ -358,14 +358,16 @@ The modern digital economy is based on reliance on a certain trusted authority. 
 Blockchain technology has the extensive potential to fundamentally transform the digital world by facilitating a distributed consensus. It means that every single transaction, whether be it past and present, including digital assets, can be checked at any time in the future. Better yet, it implements this without compromising the security of digital assets.
 
 #### Blockchain security in cloud computing
-How can we use blockchain and cloud computing for additional value creation? Let's take a look at a conceptual model of a fusion between the two technologies in exam: blockchain and cloud computing.
+Fusing blockchain technology with existing cloud system has a great potential in both functionality/performance enhancement and security/privacy improvement. The question remains on how can we use blockchain and cloud computing for additional value creation? How blockchain technology inserts into current deployed cloud solutions and enables the reengineering of cloud datacenter?
 
-Specifically this model is called **Blockchain-Cloud Fusion (BCF) model**. 
+Below we analyze some aspects that link blockchain to cloud computing. We can summarize them in this scheme:
 
-In this model who is deployed over whom? There are three types of deployment: 
-
-//TODO
-look at "Blockchain meets Cloud"
+- #### Blockchain-as-a-Service (BaaS)
+  gfgdfgfgfdgd
+  fd
+  fd
+  fd
+  fdfdfdf 
 
 
 
