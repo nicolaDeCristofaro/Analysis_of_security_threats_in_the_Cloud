@@ -50,8 +50,15 @@ The Cloud Computing paradigm is considered one of the most important paradigm sh
 - [Corrective mitigation actions](#corrective-mitigation)
 
 ### 6. [Blockchain and Cloud Security](#chap6)
-- Blockchain-as-a-Service (BaaS)
-- y
+- [What is blockchain technology?](#what-is-blockchain-technology)
+- [Where blockchain technology comes handy?](#where-blockchain-technology-comes-handy)
+- [Blockchain security and Cloud Computing](#blockchain-security-and-cloud-computing)
+  - Blockchain-as-a-Service (BaaS)
+  - Blockchain-enabled Data Provenance in Cloud
+  - Blockchain-based Access Control in Cloud
+  - Cloud Computation Offloading for Blockchain
+  - Cloud Storage Offloading for Blockchain
+  - Cloud Hardware for Blockchain mining
 
 ### 7. [Conclusions](#conclusions)
 
@@ -357,7 +364,7 @@ The modern digital economy is based on reliance on a certain trusted authority. 
 
 Blockchain technology has the extensive potential to fundamentally transform the digital world by facilitating a distributed consensus. It means that every single transaction, whether be it past and present, including digital assets, can be checked at any time in the future. Better yet, it implements this without compromising the security of digital assets.
 
-#### Blockchain security in cloud computing
+#### Blockchain security and Cloud Computing
 Fusing blockchain technology with existing cloud system has a great potential in both functionality/performance enhancement and security/privacy improvement. The question remains on how can we use blockchain and cloud computing for additional value creation? How blockchain technology inserts into current deployed cloud solutions and enables the reengineering of cloud datacenter?
 
 Below we analyze some aspects that link blockchain to cloud computing. We can summarize them in this scheme:
@@ -421,7 +428,7 @@ Below we analyze some aspects that link blockchain to cloud computing. We can su
 - Introduction to AWS Security - AWS Whitepaper - (https://docs.aws.amazon.com/whitepapers/latest/introduction-aws-security/introduction-aws-security.pdf)
 - Introduction to Azure security - (https://docs.microsoft.com/en-us/azure/security/fundamentals/overview)
 - K. Gai, K. R. Choo and L. Zhu, "Blockchain-Enabled Reengineering of Cloud Datacenters," in IEEE Cloud Computing, vol. 5, no. 6, pp. 21-25, Nov./Dec. 2018, doi: 10.1109/MCC.2018.064181116.
-- 
+- K. Gai, J. Guo, L. Zhu and S. Yu, "Blockchain Meets Cloud Computing: A Survey," in IEEE Communications Surveys & Tutorials, vol. 22, no. 3, pp. 2009-2030, thirdquarter 2020, doi: 10.1109/COMST.2020.2989392.
 
 
 
