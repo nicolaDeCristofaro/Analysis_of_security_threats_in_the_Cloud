@@ -363,13 +363,52 @@ Fusing blockchain technology with existing cloud system has a great potential in
 Below we analyze some aspects that link blockchain to cloud computing. We can summarize them in this scheme:
 
 - #### Blockchain-as-a-Service (BaaS)
-  gfgdfgfgfdgd
-  fd
-  fd
-  fd
-  fdfdfdf 
+  BaaS is a type of blockchain service model that allows blockchain systems or components to be computing resource that can be used for supporting cloud systems or other applications. The major intention of using BaaS is allowing customers to focus on core business rather than struggling with technical obstacles of blockchain. The basic idea of BaaS is that the blockchain network/application is treated as a service offering, on which users are allowed to configure blockchain settings, such as blockchain network types and smart contract rules. Infrastructure for establishing blockchain network is offered by the service provider and partial codes of blockchain are available for open source. 
+  
+  For instance Microsoft Azure supports Ethereum, Corda and Hyperledger Fabric for the deployment and configuration of a blockchain network. The Azure’s user only needs configure certain parameters rather than figuring out all technical details. Amazon Web Services (AWS), also, has provided BaaS in their mature and widely-used cloud environment since 2016. AWS’s BaaS can support both Ethereum and Hyperledger.
 
+  In most current blockchain systems, an assumption was made that the demand of the trustful third-party was reduced due to the decentralization setting. Interactions between stakeholders were assumed to be secure no matter whether the stakeholder was trustful. This assumption could be challenged and there could be trust management issues in BaaS because inserting service providers into the blockchain system could cause **"recentralizations"**. One of the reasons was that the service provider could be or had connections with stakeholder(s) so that the blockchain offering might lack of trust. A potential solution was signing a service agreement to restrict activities of CSPs (Cloud Service Providers).
 
+- #### Blockchain-enabled Data Provenance in Cloud
+  *Provenance* refers to a type of metadata that records and describes operation data. In the scenario of cloud computing, a functional provenance tells **when, where and how** data are stored, accessed, modified and deleted in cloud datacenter.
+  
+  The application of provenance in cloud benefits both CSPs and users. To address providers’ demands, provenance metadata could be utilized to debug, for discovering potential security vulnerabilities,  assist CSPs to identify abnormal process in clouds, e.g., unexpected running applications, which continually consuming resources and so on. On the other hand, from the perspective of users, provenance can protect users data from the threat of malicious insiders and also provides a platform with a function of recording both administrative and malicious operations. A long-run of fulfillment of Service Level Agreement (SLA) can be monitored under the restriction of provenance information.
+  
+  Benefits of provenance as discussed above are based on the assumption of metadata that were secure and reliable. However, provenance records still had a chance to be tempered by the threat agent, which could disable/misuse the provenance system.
+
+  **As a temper-resistant distributed ledger, blockchain could ensure the security of provenance data.** The basic idea of blockchain-based data provenance is using blockchain’s characteristic in traceability to record each activity happened to data on blocks.
+
+- #### Blockchain-based Access Control in Cloud
+  Access control was an essential method to provide cloud data security and privacy, which kept cloud data from intrusive and unauthorized users. Traditional access control methodologies in clouds were based on well-established access control policies. An example could be DAC (Discretionary Access Control) where the legitimate user (e.g., service provider) was responsible for determining how other users access to objects (e.g., cloud users).
+
+  In any case, common weakness of traditional access control mechanisms is that they highly rely on a centralization settings, which generally lacks transparency, traceability, tamper-resistance, and multi-party governance.
+
+  Differing from traditional access control methods, **Blockchain-based Access Control (BAC)** has a few benefits deriving from characteristics of blockchain. First, BAC introduces consensus into the operation of access control, such that, logically speaking, all stakeholders can be involved during the process. Establishing a consensus generally needs an agreement-level consent made by participant voters or deciders, which strengthens the security from the perspective of the decentralization. Second, traceability supported by blockchain provides a traceable and immutable governance capability for access control.
+
+  A decentralized access control technology powered by blockchain could avoid the risk of single point failure and data misusing caused by third-parties. By applying blockchain technology, data owners could flexibly and completely control the access of their own data.
+
+  To conclude, traditional access control methods face challenges in single point failure, unreliable trusted third parity and lack of user’s control. By implementing blockchain technology, users could fully control their data without threat of single point failure. In addition, smart contract provided automatic access management as well as detection and punishment of misbehaviors.
+  
+- #### Cloud Computation Offloading for Blockchain
+  Despite benefits of blockchain system in security, transparency and fault-tolerance, blockchain-based applications frequently needed a powerful backend service supports. Most blockchain systems utilized PoW consensus. Since the invention of Bitcoin, PoW had been a major consensus mechanism in blockchain system. In PoW mechanism, miners scramble the right of packaging block by solving a cryptographic puzzle. Although PoW provides high fault tolerance and security, it is computational exhausted to each node in the blockchain network. Portable communication devices, such as mobile smart phone, could not be deployed by PoW blockchain due to its constrained computation ability. Outsourcing this cryptographic puzzle game can be a solution in this scenario. 
+
+- #### Cloud Storage Offloading for Blockchain
+  Although blockchain was capable of storing temper-resistant data on-chain, blockchain’s storage capability was limited. For example, Bitcoin’s block size was only 1MB, which cannot used to storage large volume of data. Meanwhile, storing high amount of data on-chain could lead the full node size of the blockchain network intolerable high to PC and mobile users. Thus, off-chain storage technology was introduced to tackle this challenge. Cloud service Providers offer storage-as-a-service as a scalable off chain solution to users.
+
+  Using cloud storage is an alternative method for reinforcing blockchain systems, from the perspective of mass data storage, which reduces the restriction caused by the limited storage space of blocks. 
+  
+  The crucial issue is to determine which data shall be stored in blocks in order to retrieve a great balance between block size and blockchain functionality. 
+  
+  Another aspect is using blockchain techniques to facilitate secure data sharing, e.g., healthcare. In the paper of reference it is pointed out the potential hazard caused by centralized data storage and demonstrated a blockchain-based data sharing for securing personal health data.
+
+  Sun et al. in the study reported in the references, applied off-chain technology to store high amount of EHR (Electronic Health Records) data. In this work, EHR data address was stored on-chain, while the EHR data were encrypted and saved in data owner’s off-chain database. During the sharing process, the data owner firstly signed the EHR data’s address with his attributes. Then the signed address was stored in the blockchain transactions. Users verify the data owner’s signature when retrieving the data.
+
+- #### Cloud Hardware for Blockchain mining
+  Increasing difficulties during the blockchain mining process made on-premises deployment of miners expensive and space-consuming. Due to the development of parallel computing, cloud could be a flexible, pay-as-you-go manner with high computation performance. 
+  
+  Differing from traditional blockchain mining, cloud-based mining had an observable advantage. The merit was caused by the centralization setting of clouds, such that both energy saving and efficiency performance could be improved due to the hardware resource optimization. Cloud data center’s processing unit’s computation ability fundamentally determined its PoW executing efficiency.
+
+  There are different cloud mining hardware generation. CPU-based mining was original approach. It provided fully decentralization during PoW consensus but the most used It is maybe GPU miner, though energy costly, offered high amount of hashrate.
 
 ## 7. Conclusions <a name="conclusions"></a>
 
@@ -381,8 +420,8 @@ Below we analyze some aspects that link blockchain to cloud computing. We can su
 - Cloud Security Alliance, "Top Threats to Cloud Computing: Egregious Eleven Deep Dive" 09/23/2020
 - Introduction to AWS Security - AWS Whitepaper - (https://docs.aws.amazon.com/whitepapers/latest/introduction-aws-security/introduction-aws-security.pdf)
 - Introduction to Azure security - (https://docs.microsoft.com/en-us/azure/security/fundamentals/overview)
-- S. Pavithra, S. Ramya and S. Prathibha, "A Survey On Cloud Security Issues And Blockchain," 2019 3rd International Conference on Computing and Communications Technologies (ICCCT), 2019, pp. 136-140, doi: 10.1109/ICCCT2.2019.8824891.
 - K. Gai, K. R. Choo and L. Zhu, "Blockchain-Enabled Reengineering of Cloud Datacenters," in IEEE Cloud Computing, vol. 5, no. 6, pp. 21-25, Nov./Dec. 2018, doi: 10.1109/MCC.2018.064181116.
+- 
 
 
 
