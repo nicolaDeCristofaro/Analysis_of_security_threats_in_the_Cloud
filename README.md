@@ -37,9 +37,9 @@ The Cloud Computing paradigm is considered one of the most important paradigm sh
 - [Hardened Virtual Server Images](#hardened-virtual-server-images)
 
 ### 4. [Security services of the main Cloud Providers](#chap4)
-- Usage statistics of the main Cloud Providers
-- Overview of the mechanisms adopted by AWS (Amazon Web Services)
-- Overview of mechanisms adopted by Microsoft Azure
+- [Usage statistics of the main Cloud Providers]()
+- [Overview of the security mechanisms adopted by AWS (Amazon Web Services)]()
+- [Overview of the security mechanisms adopted by Microsoft Azure]()
   
 ### 5. [Analysis of a real case study: attack to Tesla](#chap5)
 - [Attack Details](#attack-details)
@@ -312,6 +312,45 @@ Threats mitigated:
   
 ## 4. Security services of the main Cloud Providers <a name="chap4"></a>
 
+#### Usage statistics of the main Cloud Providers
+Cloud adoption continues to increase as agile development, rapid deployment, and unlimited scale become the new normal for customers of all industries, sizes, and geographies. In Gartner's 2021 evaluation covering both cloud infrastructure and platform services (IaaS & PaaS, or "CIPS"), AWS is evaluated as a Leader placed highest in both axes of measurement, Ability to Execute and Completeness of Vision.
+
+<img src="./images/Figure_1_Magic_Quadrant_for_Cloud_Infrastructure_and_Platform_Services.png">
+
+Below we analyze the security mechanisms of the two most used Cloud Providers: Amazon Web Services (AWS) and Microsoft Azure.
+
+#### Overview of the security mechanisms adopted by AWS (Amazon Web Services)
+We can distinguish the different security services provided by AWS into categories. For each of them some security service will be explained. For the details go to the links in references.
+
+- #### Infrastructure protection
+
+- #### Data Protection and Encryption
+
+- #### Identity and Access Management
+
+- #### Incidence response
+
+- #### Monitoring and Logging
+
+- #### Compliance
+
+
+#### Overview of the security mechanisms adopted by Microsoft Azure
+Also for Microsoft Azure we present an overview of some of the security services offered divided into categories.
+
+While in AWS the categories were organized by the type of security offered, here the categories are organized by the cloud infrastructure components to be secured.
+
+- #### Operations
+
+- #### Applications
+
+- #### Storage
+
+- #### Networking
+
+- #### Compute
+
+
 ## 5. Analysis of a real case study: attack to Tesla <a name="chap5"></a>
 This is a real-world case study attack.and breaches cited in the Top Threats Deep Dive for its foundation. We'll provide an attack-style synopsis of the actor spanning from threats and vulnerabilities to end controls and mitigations.
 
@@ -418,7 +457,9 @@ Below we analyze some aspects that link blockchain to cloud computing. We can su
   There are different cloud mining hardware generation. CPU-based mining was original approach. It provided fully decentralization during PoW consensus but the most used It is maybe GPU miner, though energy costly, offered high amount of hashrate.
 
 ## 7. Conclusions <a name="conclusions"></a>
+Security and privacy are certainly the main obstacles to the massive adoption of the Cloud. Being aware of the main problems and threats allows Cloud Consumers on one hand to carefully manage their share of responsibility and, on the other hand, allows Cloud Providers to develop their services by giving increasing importance to security.
 
+Making the Cloud environment a safe and trustworthy environment will allow an increasing number of users to be able to take advantage of the many benefits it offers and therefore allow the realization of ideas and projects that without the Cloud would not have seen a positive conclusion, perhaps at due to large initial investments that the Cloud avoids.
 
 **References**:
  
@@ -426,6 +467,7 @@ Below we analyze some aspects that link blockchain to cloud computing. We can su
 - H. Takabi, J. B. D. Joshi and G. Ahn, "Security and Privacy Challenges in Cloud Computing Environments," in _IEEE Security & Privacy_, vol. 8, no. 6, pp. 24-31, Nov.-Dec. 2010, doi: 10.1109/MSP.2010.186.
 - Cloud Security Alliance, "Top Threats to Cloud Computing: Egregious Eleven Deep Dive" 09/23/2020
 - Introduction to AWS Security - AWS Whitepaper - (https://docs.aws.amazon.com/whitepapers/latest/introduction-aws-security/introduction-aws-security.pdf)
+- Cloud Security, Identity and Compliance Products - Amazon Web Services - (https://aws.amazon.com/products/security/)
 - Introduction to Azure security - (https://docs.microsoft.com/en-us/azure/security/fundamentals/overview)
 - K. Gai, K. R. Choo and L. Zhu, "Blockchain-Enabled Reengineering of Cloud Datacenters," in IEEE Cloud Computing, vol. 5, no. 6, pp. 21-25, Nov./Dec. 2018, doi: 10.1109/MCC.2018.064181116.
 - K. Gai, J. Guo, L. Zhu and S. Yu, "Blockchain Meets Cloud Computing: A Survey," in IEEE Communications Surveys & Tutorials, vol. 22, no. 3, pp. 2009-2030, thirdquarter 2020, doi: 10.1109/COMST.2020.2989392.
