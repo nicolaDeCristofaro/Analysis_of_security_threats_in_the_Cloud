@@ -211,6 +211,14 @@ There are two common forms of encryption known as symmetric encryption and asymm
 
 I won't go into the details of both techniques, but we can say that the basic difference between these two types of encryption is that symmetric encryption uses one key for both encryption and decryption, and the asymmetric encryption uses public key for encryption and a private key for decryption.
 
+It is also important a particular type of encryption in Cloud Environment: **Encryption at rest**. Let's briefly see what it means.
+
+Generally speaking, there are two types of data: data in motion and data at rest. Data in motion (or “active data”) is data that you most likely use on a daily basis.
+
+Data at rest is stored and is usually protected by a firewall or anti-virus software. Though these methods of protection for data at rest is good, complete safety requires adding an additional layer of defense. This is where encryption at rest comes to play.
+
+**How Encryption at Rest Works?** Simply put, data encryption is the process of translating one form of data into another form of data that unauthorized users can’t decrypt. For example, you saved a copy of a paid invoice on your server with a customer’s credit card information. You definitely don’t want that to fall into the wrong hands. By encrypting data at rest, you’re essentially converting your customer’s sensitive data into another form of data. This usually happens through an algorithm that can’t be understood by a user who does not have an encryption key to decode it. Only authorized personnel will have access to these files, thus ensuring that your data stays secure.
+
 #### Hashing
 The hashing mechanism is used when a one-way, non-reversible form of data protection is required. Once hashing has been applied to a message, it is blocked and no key is given to unlock the message. **A common application of this mechanism is the storage of passwords.**
 
@@ -323,17 +331,31 @@ Below we analyze the security mechanisms of the two most used Cloud Providers: A
 We can distinguish the different security services provided by AWS into categories. For each of them some security service will be explained. For the details go to the links in references.
 
 - #### Infrastructure protection
+  - **AWS Network Firewall**: a managed service that makes it easy to deploy essential network protections for all of your Amazon Virtual Private Clouds (VPCs). AWS Network Firewall’s flexible rules engine lets you define firewall rules that give you fine-grained control over network traffic, such as blocking outbound Server Message Block (SMB) requests to prevent the spread of malicious activity.
+  - **AWS Shield**: a managed Distributed Denial of Service (DDoS) protection service that safeguards applications running on AWS. It provides always-on detection and automatic inline mitigations that minimize application downtime and latency. (*Featured Customer: Netflix*)
 
 - #### Data Protection and Encryption
+  - **Amazon Macie**: a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS. Amazon Macie automates the discovery of sensitive data for example data stored in pubicly available S3 bucket. Macie’s alerts, or findings, can be searched and filtered in the AWS Management Console and can be used in combination with other AWS services, such as AWS Step Functions to take automated remediation actions.
+  - **AWS Key Management Service (KMS)**: it makes it easy for you to create and manage cryptographic keys and control their use across a wide range of AWS services and in your applications. AWS KMS is integrated with the AWS Encryption SDK to enable you to used KMS-protected data encryption keys to encrypt locally within your applications.
+  - **AWS Certificate Manager**: a service that lets you easily provision, manage, and deploy public and private (SSL/TLS) certificates for use with AWS services and your internal connected resources. SSL/TLS certificates are used to secure network communications and establish the identity of websites over the Internet.
+
+- #### Detection
+  - **Amazon GuardDuty**: a threat detection service that continuously monitors your AWS accounts and workloads for malicious activity and delivers detailed security findings for visibility and remediation.
+  - **AWS CloudTrail**: it monitors and records account activity across your AWS infrastructure, giving you control over storage, analysis, and remediation actions.
+  - **Amazon Inspector**: it is an automated vulnerability management service that continually scans AWS workloads for software vulnerabilities and unintended network exposure.
+  - **AWS Security Hub**: aggregate findings and alerts of all AWS security services used.
 
 - #### Identity and Access Management
+  - **AWS Identity and Access Management (IAM)**: it provides fine-grained access control across all of AWS. With IAM, you can specify who can access which services and resources, and under which conditions.
+  - **Amazon Cognito**: it lets you add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily. Amazon Cognito scales to millions of users and supports sign-in with social identity providers, such as Apple, Facebook, Google and so on.
 
 - #### Incidence response
-
-- #### Monitoring and Logging
+  - **AWS Elastic Disaster Recovery (AWS DRS)** minimizes downtime and data loss with fast, reliable recovery of on-premises and cloud-based applications. Your data is replicated to a staging area subnet in your AWS account, in the AWS Region you select. The staging area design reduces costs by using affordable storage and minimal compute resources to maintain ongoing replication. If you need to recover applications, you can launch recovery instances on AWS within minutes, using the most up-to-date server state or a previous point in time. 
 
 - #### Compliance
+  - **AWS Audit Manager**: it helps you continuously audit your AWS usage to simplify how you assess risk and compliance with regulations and industry standards.
 
+These are not all the security mechanisms adopted by AWS, but surely we can understand how security in the Cloud is held in the first places by Cloud Providers.
 
 #### Overview of the security mechanisms adopted by Microsoft Azure
 Also for Microsoft Azure we present an overview of some of the security services offered divided into categories.
@@ -341,18 +363,36 @@ Also for Microsoft Azure we present an overview of some of the security services
 While in AWS the categories were organized by the type of security offered, here the categories are organized by the cloud infrastructure components to be secured.
 
 - #### Operations
-
+  - **Microsoft Defender for Cloud**: it provides integrated security monitoring and policy management across your Azure subscriptions, helps detect threats that might otherwise go unnoticed. In addition, Defender for Cloud helps with security operations by providing you a single dashboard that surfaces alerts and recommendations that can be acted upon immediately.
+  - **Application Insights**: it is an extensible Application Performance Management (APM) service for web developers. With Application Insights, you can monitor your live web applications and automatically detect performance anomalies. It includes powerful analytics tools to help you diagnose issues and to understand what users actually do with your apps.
+  
 - #### Applications
+  - **Penetration Testing**: a service that doesn't perform penetration testing of your application for you, but it is understandable that users want and need to perform testing on its own applications. That’s a good thing, because when you enhance the security of your applications you help make the entire Azure ecosystem more secure. This service helps in doing this.
+  - **Web Application firewall**: it helps protect web applications from common web-based attacks like SQL injection, cross-site scripting attacks, and session hijacking. It comes preconfigured with protection from threats identified by the Open Web Application Security Project (OWASP) as the top 10 common vulnerabilities.
 
 - #### Storage
-
+  - **Azure role-based access control**: it allows you to restrict users access based on privileges security principles for organizations that want to enforce Security Policies for dara access. These access rights are granted by assigning the appropriate Azure role to groups and applications at a certain scope.
+  - **Encryption in Transit**: a mechanism of protecting data when it is transmitted across networks.
+  - **Storage Service Encryption**: it allows you to request that the storage service automatically encrypt data when writing it to Azure Storage.
+  
 - #### Networking
+  - **Network Security Groups**: basic stateful packet filtering firewalls that can be used to control traffic moving between subnets within an Azure Virtual Network and traffic between an Azure Virtual Network and the Internet.
+  - **VPN Gateway**: it is a type of virtual network gateway that sends encrypted traffic across a public connection.
+  - **Express Route**: it is a dedicated WAN link that lets you extend your on-premises networks into the Microsoft cloud over a dedicated private connection facilitated by a connectivity provider.
 
 - #### Compute
+  - **Hardware Security Module**: Encryption and authentication do not improve security unless the keys themselves are protected. You can simplify the management and security of your critical secrets and keys by storing them in Azure Key Vault. **Key Vault** provides the option to store your keys in hardware Security modules (HSMs).
+  - **Virtual machine backup**: Application errors can corrupt your data, and human errors can introduce bugs into your applications that can lead to security issues. With Azure Backup, virtual machines are protected.
+  - **Azure Site Recovery**: it helps orchestrate replication, failover, and recovery of workloads and apps so that they are available from a secondary location if your primary location goes down.
+  
+- #### Identity and access management
+  - **Azure Active Directory**: a comprehensive identity and access management cloud solution, helps secure access to data in applications on site and in the cloud, and simplifies the management of users and groups. It combines core directory services, advanced identity governance, security, and application access management, and makes it easy for developers to build policy-based identity management into their apps. 
+
+After this overview of a number of security mechanisms offered by the two main cloud providers, we will analyze a real case study: an attack on the AWS Cloud through its Tesla customer.
 
 
 ## 5. Analysis of a real case study: attack to Tesla <a name="chap5"></a>
-This is a real-world case study attack.and breaches cited in the Top Threats Deep Dive for its foundation. We'll provide an attack-style synopsis of the actor spanning from threats and vulnerabilities to end controls and mitigations.
+This is a real-world case study attack cited in the Top Threats Deep Dive for its foundation. We'll provide an attack-style synopsis of the actor spanning from threats and vulnerabilities to end controls and mitigations.
 
 #### Attack Details
 - **Actor**: *External malicious hacker(s)* gained access to an unsecured Kubernetes administrative interface. This was discovered by security researchers and reported to Tesla.
