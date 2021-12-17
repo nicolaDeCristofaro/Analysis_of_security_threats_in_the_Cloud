@@ -1,7 +1,7 @@
 # Analysis of security and privacy threats in the cloud, countermeasures adopted and how the blockchain can help
 
 ### Abstract 
-The Cloud Computing paradigm is considered one of the most important paradigm shifts, in the technological field, in recent years. Its remarkable growth is mainly due to the opportunity it offers users to reduce costs and at the same time increase the efficiency of applications by providing a new approach to using services. In fact, one of the main features of the Cloud is the ability to pay only for the resources actually used and thus avoid large initial investments. However, despite the numerous advantages offered, there are still possible security threats that are perceived as the main obstacle to the massive adoption of the Cloud. In this study we analyze the main security and privacy threats in the Cloud, and the related countermeasures adopted to achieve a reliable Cloud environment. In particular, we will refer to the security mechanisms used by the most used Cloud Providers: Amazon Web Services and Microsoft Azure. Furthermore, a real case study of an attack on a Cloud Provider will be presented with the relative details to understand the level of associated risk, and finally we will make an overview on the use of the blockchain in combination with the Cloud to understand which added values it manages to achieve.
+The Cloud Computing paradigm is considered one of the most important paradigm shifts, in the technological field, in recent years. Its remarkable growth is mainly due to the opportunity it offers users to reduce costs and at the same time increase the efficiency of applications by providing an innovative approach to using services. In fact, one of the key features of the Cloud is the ability to pay only for the resources actually used and thus avoid large initial investments. However, despite the numerous advantages offered, there are still security threats that are perceived as the main obstacle to the massive adoption of the Cloud. In this study we analyze the main security and privacy threats in the Cloud, and the related countermeasures adopted to achieve a reliable Cloud environment. In particular, we will refer to the security mechanisms used by the most used Cloud Providers: Amazon Web Services and Microsoft Azure. Furthermore, a real case study of an attack on a Cloud Provider will be presented with the relative details to understand the level of associated risk, and finally we will make an overview on the use of the blockchain in combination with the Cloud to understand which added values it manages to achieve.
 
 ## Index
 
@@ -72,7 +72,7 @@ The US National Institute of Standards and Technology (NIST) defines the Cloud a
 *"Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction".*
 
 #### Some statistics
-According to predictions from Gartner, global spending on cloud services is expected to reach over $482 billion in 2022, up from $313 billion in 2020. Cloud computing infrastructure is the backbone of the delivery pipeline of just about every digital service, from social media and streaming entertainment to connected cars and autonomous internet of things (IoT) infrastructure. New or upcoming ultra-fast networks like 5G and Wi-Fi 6E don't just mean more data will be streamed from the cloud; they mean new types of data can be streamed. We see this with the explosion in the availability of cloud gaming platforms such as Google's Stadia and Amazon Luna, which will see increasing levels of investment over the course of 2022. We will also see the arrival of cloud virtual and augmented reality (VR/AR) which should lead to smaller and cheaper headsets. Cloud technology essentially makes every other technology lighter, faster, and more accessible from a customer point of view, and this fact will be a key driver in the migration of more services to cloud platforms.
+According to predictions from Gartner, global spending on cloud services is expected to reach over $482 billion in 2022, up from $313 billion in 2020. Cloud computing infrastructure is the backbone of the delivery pipeline of about every digital service, from social media and streaming entertainment to connected cars and autonomous internet of things (IoT) infrastructure. New or upcoming ultra-fast networks like 5G and Wi-Fi 6E don't just mean more data will be streamed from the cloud; they mean new types of data can be streamed. We see this with the explosion in the availability of cloud gaming platforms such as Google's Stadia and Amazon Luna, which will see increasing levels of investment over the course of 2022. We will also see the arrival of cloud virtual and augmented reality (VR/AR) which should lead to smaller and cheaper headsets. Cloud technology makes every other technology lighter, faster, and more accessible from a customer point of view, and this fact will be a key driver in the migration of more services to cloud platforms.
 
 ![Eurostat](./images/Use_of_cloud_computing_services,_2020_and_2021.png)
 
@@ -84,7 +84,7 @@ According to predictions from Gartner, global spending on cloud services is expe
 #### The main benefits of the Cloud
 We can therefore see that even if in different proportions the Cloud is widespread and used in every part of the world. This is due to the great advantages that the cloud offers, which we summarize below:
 
-- **Reduced initial investment**: similar to a product wholesaler who buys wholesale goods at lower prices, public cloud providers base their business model on the mass acquisition of IT resources which are then made available to cloud consumers at advantageous prices. This opens the door for organizations to gain access to a powerful infrastructure without having to purchase it themselves.
+- **Reduced initial investment**: like a product wholesaler who buys wholesale goods at lower prices, public cloud providers base their business model on the mass acquisition of IT resources which are then made available to cloud consumers at advantageous prices. This opens the door for organizations to gain access to a powerful infrastructure without having to purchase it themselves.
 
 The most common economic reason for investing in cloud-based IT resources is the reduction or permanent elimination of initial IT investments, i.e. initial hardware and software purchases. This elimination or minimization of initial financial commitments allows companies to start small and consequently increase the allocation of IT resources as needed.
 Furthermore, the reduction of the initial capital allows to redirect the capital towards other core areas of the business.
@@ -97,7 +97,7 @@ Other benefits related to cost reduction are:
 
 - **Increased Scalability**: Cloud platforms allow you to instantly and dynamically allocate IT resources, on demand. This allows cloud consumers to scale their cloud-based IT resources to meet fluctuations and processing spikes automatically or manually. Likewise, cloud-based IT resources can be released (automatically or manually) as processing demands decrease.
 
-- **Increased Availability and Reliability**: By leveraging cloud environments to make IT resources highly available and reliable, organizations are able to increase customer service quality guarantees and further reduce or avoid potential business losses arising from unexpected runtime errors.
+- **Increased Availability and Reliability**: By leveraging cloud environments to make IT resources highly available and reliable, organizations can increase customer service quality guarantees and further reduce or avoid potential business losses arising from unexpected runtime errors.
 
 In particular:
   - An IT resource with higher availability is accessible for longer periods of time (for example, 22 hours on a 24 hour day). Providers generally offer "resilient" IT resources for which they can guarantee high levels of availability.
@@ -115,7 +115,7 @@ Let's first introduce some security concepts that are specific to the Cloud envi
 - **Extensibility & Shared Responsibility**
 Cloud providers and customers must share the responsibility for security and privacy in cloud computing environments, but sharing levels will differ for different Cloud delivery models where a cloud delivery model represents a specific combination of IT resources offered by a Cloud Provider:
   - With **SaaS (Software as a Service)**, the Cloud provider manages both the software and the underlying infrastructure. Users access the service over the Internet, usually through a web browser. In this scenario, the Cloud Provider is more responsible for the security and privacy of application services.
-  - **PaaS (Platform as a Service)** represents a "ready to use" environment that typically includes IT resources already configured and deployed. PaaS is designed to make application development quick and easy, without the worry of setting up and managing the underlying infrastructure of servers, storage, networks, etc. Obviously, this way you more control of resources than in SaaS but not the full control. Thus, customers are primarly responsible for protecting the applications they build and run on the platform. Providers are then responsible for isolating the customers' applications and workspaces from one another.
+  - **PaaS (Platform as a Service)** represents a "ready to use" environment that typically includes IT resources already configured and deployed. PaaS is designed to make application development quick and easy, without the worry of setting up and managing the underlying infrastructure of servers, storage, networks, etc. Obviously, this way you more control of resources than in SaaS but not the full control. Thus, customers are primarily responsible for protecting the applications they build and run on the platform. Providers are then responsible for isolating the customers' applications and workspaces from one another.
   - The **IaaS (Infrastructure as a Service)** model represents a self-contained IT environment composed of infrastructure-centric IT resources, accessible and fully managed by the consumer cloud. This environment can include hardware, networking, connectivity, and other "raw" IT resources. In this scenario It is expected that the consumers secure the operating systems, applications, and content. The Cloud Provider still must provide some basic, low-level data protection capabilities.
 
 #### Threats Agents
@@ -123,7 +123,7 @@ Before moving on to analyze the various Cloud security issues, we can distinguis
 
 - **Anonymous Attacker**: An anonymous user, consumer of cloud services with no permissions in the cloud. It typically exists as an external software program that launches network-level attacks across public networks. Anonymous attackers often resort to committing acts such as bypassing user accounts or stealing user credentials, using methods that ensure anonymity.
 
-- **Malicious Service Agent**: A malicious service agent is able to intercept and forward network traffic flowing within a cloud. It typically exists as a program that pretends to be a service agent with malicious logic. It can also exist as an external program that can remotely intercept and potentially corrupt the message content.
+- **Malicious Service Agent**: A malicious service agent can intercept and forward network traffic flowing within a cloud. It typically exists as a program that pretends to be a service agent with malicious logic. It can also exist as an external program that can remotely intercept and potentially corrupt the message content.
 
 - **Trusted Attacker**: A trusted attacker shares IT resources in the same cloud environment as the cloud consumer and attempts to exploit legitimate credentials to target cloud providers with whom they share IT resources (*Attack from the inside*). Unlike anonymous attackers (who are not "trusted"), trusted attackers usually launch their attacks from inside the trusted boundaries of a cloud by abusing legitimate credentials or by stealing sensitive and confidential information. Examples: weak authentication processes, breaking of a cryptographic mechanism, DDoS ...
 
@@ -135,7 +135,7 @@ Now we can go into the details of the problems and threats of the Cloud, then in
 Cloud computing provides access to data, but the challenge is to ensure that only authorized entities can gain access to it. When we use cloud environments, we rely on third parties to make decisions about our data and platforms in ways never seen before in computing. It’s critical to have appropriate mechanisms to prevent cloud providers from using customers’ data in a way that hasn’t been agreed upon.
 
 Examples of attacks in this category could be:
-  - **Traffic Eavesdropping**: Traffic interception occurs when data transferred within a cloud (usually from the consumer to the cloud provider) is passively intercepted by a malicious service agent for illegitimate information-gathering purposes. The purpose of this attack is to directly compromise the confidentiality of the data and, possibly, the confidentiality of the relationship between the consumer and the cloud provider. Due to the passive nature of the attack, it can more easily go unnoticed for long periods of time.
+  - **Traffic Eavesdropping**: Traffic interception occurs when data transferred within a cloud (usually from the consumer to the cloud provider) is passively intercepted by a malicious service agent for illegitimate information-gathering purposes. The purpose of this attack is to directly compromise the confidentiality of the data and the confidentiality of the relationship between the consumer and the cloud provider. Due to the passive nature of the attack, it can more easily go unnoticed for prolonged periods of time.
   - **Malicious Intermediary**: This type of threat occurs when messages are intercepted and altered by a malicious service agent, thus potentially compromising the confidentiality and / or integrity of the message. It can also insert malicious data into the message before forwarding it to its destination.
 
 #### Denial of Service
@@ -156,20 +156,20 @@ An example of attack in this category is:
     - This attack occurs when access is granted to an attacker incorrectly or with too wide privileges, resulting in the attacker gaining access to IT resources that are normally protected. A variant of this attack, known as Weak Authentication, can occur when weak passwords or shared accounts are used.
 
 #### Access Control
-In many application scenarios, such as those in enterprises or organizations, users’ access to data is usually selective and highly differentiated. Different users enjoy different access privileges with regard to the data. When data are outsourced to the cloud, enforcing secure, efficient, and reliable data access among a large number of users is thus critical. 
+In many application scenarios, such as those in enterprises or organizations, users’ access to data is usually selective and highly differentiated. Different users enjoy different access privileges regarding the data. When data are outsourced to the cloud, enforcing secure, efficient, and reliable data access among a large number of users is thus critical. 
 
-Traditionally, to control the dissemination of privacy-sensitive data, users establish a trusted server to store data locally in clear, and then control that server to check whether requesting users present proper certification before letting them access the data. From a security standpoint, this access control architecture is no longer applicable when we outsource data to the cloud. Because data users and cloud servers aren’t in the same trusted domain, the server might no longer be fully trusted as an omniscient reference monitor9 for defining and enforcing access control policies and managing user details. In the event of either server compromise or potential insider attacks, users’ private data might even be exposed.
+Traditionally, to control the dissemination of privacy-sensitive data, users establish a trusted server to store data locally in clear, and then control that server to check whether requesting users present proper certification before letting them access the data. From a security standpoint, this access control architecture is no longer applicable when we outsource data to the cloud. Because data users and cloud servers aren’t in the same trusted domain, the server might no longer be fully trusted as an omniscient reference monitor9 for defining and enforcing access control policies and managing user details. In the event of either server compromise or potential insider attacks, users’ confidential data might even be exposed.
 
 #### Virtualization & Hypervisor
 Virtualization is an important enabling technology that helps abstract infrastructure and resources to be made available to clients as isolated VMs. A hypervisor or VM monitor is a piece of software that lets multiple operating systems run on a host computer concurrently. 
 
-In other words, the virtualization and hypervisor combination provides multiple cloud users with access to IT resources that share the underlying hardware but are logically isolated from each other.
+In other words, the virtualization and hypervisor combination provide multiple cloud users with access to IT resources that share the underlying hardware but are logically isolated from each other.
 
 Although this provides a means to generate virtualized resources for sharing, such technology’s presence also increases the attack surface. We need mechanisms to ensure strong isolation, and secure communications between VMs.
 
 An example of attack in this category is:
 - **Virtualization Attack**
-  - As cloud providers grant cloud consumers administrative access to virtualized IT resources (such as virtual servers), there is an inherent risk that cloud consumers may abuse this access to attack underlying physical IT resources. A Virtualization Attack exploits vulnerabilities in the virtualization platform to compromise its confidentiality, integrity and / or availability.A successful virtualization attack can have significant repercussions on all other users who use virtualized resources on the attacked physical hardware.
+  - As cloud providers grant cloud consumers administrative access to virtualized IT resources (such as virtual servers), there is an inherent risk that cloud consumers may abuse this access to attack underlying physical IT resources. A Virtualization Attack exploits vulnerabilities in the virtualization platform to compromise its confidentiality, integrity and / or availability. A successful virtualization attack can have significant repercussions on all other users who use virtualized resources on the attacked physical hardware.
 
 #### Overlapping Trust Boundaries
 If physical IT assets within a cloud are shared by multiple consumers of cloud services, we say these consumers have overlapping boundaries of trust.
@@ -177,7 +177,7 @@ If physical IT assets within a cloud are shared by multiple consumers of cloud s
 Malicious cloud consumers can target shared IT resources with the intention of compromising other consumers. The consequence is that some or all of the other consumers of cloud services could be affected by the attack and the attacker could use virtual IT resources of users with whom they share the same border of trust.
   
 ### Privacy and Data Protection
-Privacy is a core issue in all the challenges we’ve discussed so far.. Many organizations aren’t comfortable storing their data and applications on systems that reside outside of their on-premise datacenters. This might be the single greatest fear of cloud clients. By migrating workloads to a shared infrastructure, customers’ private information faces increased risk of potential unauthorized access and exposure. 
+Privacy is a core issue in all the challenges we’ve discussed so far. Many organizations aren’t comfortable storing their data and applications on systems that reside outside of their on-premises datacenters. This might be the single greatest fear of cloud clients. By migrating workloads to a shared infrastructure, customers’ confidential information faces increased risk of potential unauthorized access and exposure. 
 
 Cloud service providers must assure their customers and provide a high degree of transparency into their operations and privacy assurance. Privacy-protection mechanisms must be embedded in all security solutions. 
 
@@ -209,18 +209,18 @@ The encryption mechanism can help counter cloud security threats such as:
  
 There are two common forms of encryption known as symmetric encryption and asymmetric encryption.
 
-I won't go into the details of both techniques, but we can say that the basic difference between these two types of encryption is that symmetric encryption uses one key for both encryption and decryption, and the asymmetric encryption uses public key for encryption and a private key for decryption.
+I won't go into the details of both techniques, but we can say that the basic difference between these two types of encryptions is that symmetric encryption uses one key for both encryption and decryption, and the asymmetric encryption uses public key for encryption and a private key for decryption.
 
 It is also important a particular type of encryption in Cloud Environment: **Encryption at rest**. Let's briefly see what it means.
 
-Generally speaking, there are two types of data: data in motion and data at rest. Data in motion (or “active data”) is data that you most likely use on a daily basis.
+There are two types of data: data in motion and data at rest. Data in motion (or “active data”) is data that you use daily.
 
 Data at rest is stored and is usually protected by a firewall or anti-virus software. Though these methods of protection for data at rest is good, complete safety requires adding an additional layer of defense. This is where encryption at rest comes to play.
 
-**How Encryption at Rest Works?** Simply put, data encryption is the process of translating one form of data into another form of data that unauthorized users can’t decrypt. For example, you saved a copy of a paid invoice on your server with a customer’s credit card information. You definitely don’t want that to fall into the wrong hands. By encrypting data at rest, you’re essentially converting your customer’s sensitive data into another form of data. This usually happens through an algorithm that can’t be understood by a user who does not have an encryption key to decode it. Only authorized personnel will have access to these files, thus ensuring that your data stays secure.
+**How Encryption at Rest Works?** Simply put, data encryption is the process of translating one form of data into another form of data that unauthorized users can’t decrypt. For example, you saved a copy of a paid invoice on your server with a customer’s credit card information. You definitely don’t want that to fall into the wrong hands. By encrypting data at rest, you’re converting your customer’s sensitive data into another form of data. This usually happens through an algorithm that can’t be understood by a user who does not have an encryption key to decode it. Only authorized personnel will have access to these files, thus ensuring that your data stays secure.
 
 #### Hashing
-The hashing mechanism is used when a one-way, non-reversible form of data protection is required. Once hashing has been applied to a message, it is blocked and no key is given to unlock the message. **A common application of this mechanism is the storage of passwords.**
+The hashing mechanism is used when a one-way, non-reversible form of data protection is required. Once hashing has been applied to a message, it is blocked, and no key is given to unlock the message. **A common application of this mechanism is the storage of passwords.**
 
 Hashing technology can be used to derive a hashing code or digest from a message, which is often of a fixed length and smaller than the original message. The sender of the message can then use the hashing mechanism to attach the message digest to the message.
 
@@ -251,7 +251,7 @@ A common approach to managing asymmetric key issuance is based on the Public Key
 
 This system is used to bind public keys to their respective key owners (known as public key identification) while allowing verification of the validity of the key. PKIs rely on the use of digital certificates, which are digitally signed data structures that bind public keys to the identities of the certificate owner, as well as related information, such as validity periods.
 
-Digital certificates are typically digitally signed by a third-party certification authority (CA).
+A third-party certification authority (CA) typically digitally signs digital certificates.
 
 Larger organizations, such as Microsoft, can act as their own CA and issue certificates to their customers and the public, as individual users can also generate certificates as long as they have the appropriate software tools.
 
@@ -259,15 +259,15 @@ Threats mitigated:
 - insufficient authorization
 
 #### Identity and Access Management (IAM)
-This mechanism includes the components and policies needed to control and track user identities and access privileges for IT systems, environments and resources.
+This mechanism includes the components and policies needed to control and track user identities and access privileges for IT systems, environments, and resources.
 
 Specifically, IAM mechanisms exist as systems composed of four main components:
 
-- **Authentication**: Username and password combinations remain the most common forms of user authentication credentials managed by the IAM system, which can also support digital signatures, digital certificates, biometric hardware, and so on. We can say this component tries to respond the question WHO ARE YOU?.
+- **Authentication**: Username and password combinations remain the most common forms of user authentication credentials managed by the IAM system, which can also support digital signatures, digital certificates, biometric hardware, and so on. We can say this component tries to respond the question WHO ARE YOU?
   
-- **Authorization**: Defines the correct granularity for access and privilege controls. It respond to the question WHAT CAN YOU DO?
+- **Authorization**: Defines the correct granularity for access and privilege controls. It responds to the question WHAT CAN YOU DO?
 
-- **User Management**: The user management program is responsible for creating new users and access groups (each cloud consumer can have several associated users with relative privileges), resetting passwords, defining password policies and managing privileges.
+- **User Management**: The user management program is responsible for creating new users and access groups (each cloud consumer can have several associated users with relative privileges), resetting passwords, defining password policies, and managing privileges.
 
 - **Credential Management**: The credential management system establishes the identities and access control rules for defined user accounts.
 
@@ -289,7 +289,7 @@ The credentials initially provided by the cloud service consumer remain valid fo
 
 The SSO mechanism security broker is particularly useful when a consumer of cloud services needs to access cloud services that reside on different clouds.
 
-* This mechanism does not counteract any of the cloud threats we have seen, but mainly improves usability in accessing and managing cloud resources.*
+* This mechanism does not counteract any of the cloud threats we have seen, but improves usability in accessing and managing cloud resources.*
 
 #### Cloud-Based Security Groups
 Cloud resource segmentation is accomplished which is a process by which separate physical and virtual IT environments are created for different users and groups. For example, an organization's WAN can be partitioned based on individual network security requirements. One network can be established with a resilient firewall for external Internet access, while a second is implemented without a firewall because its users are internal and cannot access the Internet.
@@ -311,7 +311,7 @@ A virtual server in the Cloud is created from a template configuration called a 
 
 Hardening virtual server image is the process of removing unnecessary software from a system to limit potential vulnerabilities that can be exploited by attackers. Removing redundant programs, closing unnecessary server ports, and disabling unused services, internal root accounts, and guest access are all examples of hardening.
 
-A secure virtual server image is a template for creating virtual server instances that has undergone a hardened process. This generally results in a virtual server template that is significantly more secure than the original standard image.
+A secure virtual server image is a template for creating virtual server instances that has undergone a hardened process. This results in a virtual server template that is significantly more secure than the original standard image.
 
 Threats mitigated:
 - overlapping trust boundaries
@@ -331,11 +331,11 @@ Below we analyze the security mechanisms of the two most used Cloud Providers: A
 We can distinguish the different security services provided by AWS into categories. For each of them some security service will be explained. For the details go to the links in references.
 
 - #### Infrastructure protection
-  - **AWS Network Firewall**: a managed service that makes it easy to deploy essential network protections for all of your Amazon Virtual Private Clouds (VPCs). AWS Network Firewall’s flexible rules engine lets you define firewall rules that give you fine-grained control over network traffic, such as blocking outbound Server Message Block (SMB) requests to prevent the spread of malicious activity.
+  - **AWS Network Firewall**: a managed service that makes it easy to deploy essential network protections for all your Amazon Virtual Private Clouds (VPCs). AWS Network Firewall’s flexible rules engine lets you define firewall rules that give you fine-grained control over network traffic, such as blocking outbound Server Message Block (SMB) requests to prevent the spread of malicious activity.
   - **AWS Shield**: a managed Distributed Denial of Service (DDoS) protection service that safeguards applications running on AWS. It provides always-on detection and automatic inline mitigations that minimize application downtime and latency. (*Featured Customer: Netflix*)
 
 - #### Data Protection and Encryption
-  - **Amazon Macie**: a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS. Amazon Macie automates the discovery of sensitive data for example data stored in pubicly available S3 bucket. Macie’s alerts, or findings, can be searched and filtered in the AWS Management Console and can be used in combination with other AWS services, such as AWS Step Functions to take automated remediation actions.
+  - **Amazon Macie**: a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS. Amazon Macie automates the discovery of sensitive data for example data stored in publicly available S3 bucket. Macie’s alerts, or findings, can be searched and filtered in the AWS Management Console and can be used in combination with other AWS services, such as AWS Step Functions to take automated remediation actions.
   - **AWS Key Management Service (KMS)**: it makes it easy for you to create and manage cryptographic keys and control their use across a wide range of AWS services and in your applications. AWS KMS is integrated with the AWS Encryption SDK to enable you to used KMS-protected data encryption keys to encrypt locally within your applications.
   - **AWS Certificate Manager**: a service that lets you easily provision, manage, and deploy public and private (SSL/TLS) certificates for use with AWS services and your internal connected resources. SSL/TLS certificates are used to secure network communications and establish the identity of websites over the Internet.
 
@@ -355,10 +355,10 @@ We can distinguish the different security services provided by AWS into categori
 - #### Compliance
   - **AWS Audit Manager**: it helps you continuously audit your AWS usage to simplify how you assess risk and compliance with regulations and industry standards.
 
-These are not all the security mechanisms adopted by AWS, but surely we can understand how security in the Cloud is held in the first places by Cloud Providers.
+These are not all the security mechanisms adopted by AWS, but surely, we can understand how security in the Cloud is held in the first places by Cloud Providers.
 
 #### Overview of the security mechanisms adopted by Microsoft Azure
-Also for Microsoft Azure we present an overview of some of the security services offered divided into categories.
+Also, for Microsoft Azure we present an overview of some of the security services offered divided into categories.
 
 While in AWS the categories were organized by the type of security offered, here the categories are organized by the cloud infrastructure components to be secured.
 
@@ -388,7 +388,7 @@ While in AWS the categories were organized by the type of security offered, here
 - #### Identity and access management
   - **Azure Active Directory**: a comprehensive identity and access management cloud solution, helps secure access to data in applications on site and in the cloud, and simplifies the management of users and groups. It combines core directory services, advanced identity governance, security, and application access management, and makes it easy for developers to build policy-based identity management into their apps. 
 
-After this overview of a number of security mechanisms offered by the two main cloud providers, we will analyze a real case study: an attack on the AWS Cloud through its Tesla customer.
+After this overview of several security mechanisms offered by the two main cloud providers, we will analyze a real case study: an attack on the AWS Cloud through its Tesla customer.
 
 
 ## 5. Analysis of a real case study: attack to Tesla <a name="chap5"></a>
@@ -404,13 +404,13 @@ This is a real-world case study attack cited in the Top Threats Deep Dive for it
   - Inadequate antimalware and security monitoring failed to detect and prevent the installation of mining scripts.
 
 #### Technical Impacts
-- **Data Breach**: The attackers were able to gain access to AWS S3 buckets housing intellectual property related to internally-used engineering test cars.
+- **Data Breach**: The attackers were able to gain access to AWS S3 buckets housing intellectual property related to internally used engineering test cars.
 - **Malware infection**: The intrusion allowed the attackers to install evasive cryptocurrency mining scripts. In addition to steaking computing resources, these nefarious scripts provide an avenue for attackers to persist within the environment if not properly detected and remediated
 
 #### Business Impacts
-- **Financial**: Possible increases in the cost of cloud computing resources could be realized depending on the length of time the attackers spent mining crypto currency within the compromised network: possible risk of exfiltrating and selling valuable intellectual property to highest bidding competitor.
+- **Financial**: Increases in the cost of cloud computing resources could be realized depending on the length of time the attackers spent mining crypto currency within the compromised network: risk of exfiltrating and selling valuable intellectual property to highest bidding competitor.
 - **Operational**: Time and effort taken by the Digital Forensic and Incident Response (DFIR) team to manage malware infections, revoke access credentials and ensure reconfiguration of the Kubernetes administrative instance.
-- **Compliance:** This attack may not have direct impacts from non compliance since confidential data such as customer PII was not exposed. However, there was a loss of confidentiality of sensitive data that could be possibly related to trade secrets.
+- **Compliance:** This attack may not have direct impacts from non-compliance since confidential data such as customer PII was not exposed. However, there was a loss of confidentiality of sensitive data that could be possibly related to trade secrets.
 - **Reputational**: The data breach may have led to a reduction of consumer confidence and a diminished perception of brand value.
 
 #### Preventive Mitigation
@@ -418,28 +418,28 @@ This is a real-world case study attack cited in the Top Threats Deep Dive for it
 - **Sensitive Data Protection** – Encryption should be enforced for sensitive data in stored in the cloud. CSPs should provide customers with the option to select client side or server-side encryption. Where possible, customers should select encryption mechanisms that complement the value and use of data being protected.
 - **Credential Lifecycle/Provision Management** – Establishment of user access control policies supporting business processes and technical controls that ensure appropriate identity and access management for all users with access to data.
 - **Employee training** – Intelligence driven security awareness training should be provided to DevOps teams on secure development practices. This can help mitigate the risk of security misconfiguration.
-- **Vulnerability / Patch Management** – Timely detection of weaknesses within configurations of applications, infrastructure, network and system components can ensure efficacy of implemented security controls. For example, penetration testing of applications can reveal the presence of weak authentication mechanisms that need to be corrected before being exploited by attackers.
+- **Vulnerability / Patch Management** – Timely detection of weaknesses within configurations of applications, infrastructure, network, and system components can ensure efficacy of implemented security controls. For example, penetration testing of applications can reveal the presence of weak authentication mechanisms that need to be corrected before being exploited by attackers.
 
 #### Detective Mitigation
 - **Quality Testing** – Organizations should have defined change control and testing processes to test applications and before being deployed into production. This can help in detecting misconfigured services that can affect the confidentiality, integrity and availability of systems and services.
-- **Audit Logging / Intrusion Detection** – CSP’s should provide customer’s the capability to detect potentially suspicious network behaviours/ anomalies within their environment. Furthermore, the CSP needs to ensure the confidentiality, integrity and availability of audit logs are maintained at all times to aid forensic investigations.
-- **Anti-Virus / Malicious Software** – Some endpoint detection and response (EDR) solutions are capable of detecting and mitigating the effects of malware intrusions. Although not fully encompassing, these solutions at the very least can help in detecting and preventing the execution of commodity malware or publicly known tools which are still currently being used in the wild by adversaries.
+- **Audit Logging / Intrusion Detection** – CSP’s should provide customer’s the capability to detect potentially suspicious network behaviours/ anomalies within their environment. Furthermore, the CSP needs to ensure the confidentiality, integrity and availability of audit logs are always maintained to aid forensic investigations.
+- **Anti-Virus / Malicious Software** – Some endpoint detection and response (EDR) solutions can detect and mitigating the effects of malware intrusions. Although not fully encompassing, these solutions at the very least can help in detecting and preventing the execution of commodity malware or publicly known tools which are still currently being used in the wild by adversaries.
   
 
 #### Corrective Mitigation
 - **Incident Management** – An Incident Response Team will be required to triage/investigate suspicious security events and ensure timely and thorough management of incidents, as established within the Incident Response process.
-- **Incident Response Metrics** – Each incident should be tracked in order to provide justification for time and resources spent to manage incidents. This will aid Management in making investment decisions needed to improve the Incident Response process.
+- **Incident Response Metrics** – Each incident should be tracked to provide justification for time and resources spent to manage incidents. This will aid Management in making investment decisions needed to improve the Incident Response process.
 
 
 ## 6. Blockchain and Cloud Security <a name="chap6"></a>
 
 #### What is blockchain technology?
-The concept of blockchain gained mainstream attention in 2017. In simple terms, blockchain is a technology that enables data to be stored and transferred on a peer-to-peer basis. It can also be compared to a bank ledger holding transactions. It stores information about date, time, and amount of money, etc. It’s used in a ‘decentralised’ manner and it eliminates the need for ‘trusted third parties’. The blockchain network doesn’t have any central authority.
+The concept of blockchain gained mainstream attention in 2017. In simple terms, blockchain is a technology that enables data to be stored and transferred on a peer-to-peer basis. It can also be compared to a bank ledger holding transactions. It stores information about date, time, and amount of money, etc. It’s used in a ‘decentralised’ manner, and it eliminates the need for ‘trusted third parties. The blockchain network doesn’t have any central authority.
 
 A particular property of the blockchain is: *"The data structure in a blockchain is append-only: the data cannot be modified or deleted"*.
 
 #### Where blockchain technology comes handy?
-The modern digital economy is based on reliance on a certain trusted authority. Simply put, the online transactions we make rely on trusting someone to tell us the truth. For example, when we send an email to somebody we need the provider to tell us that the email is delivered. The point is that we live our life rather uncertainly in the digital world by relying on a third entity for the security of our digital assets. The bad news is that these so-called third-party sources can be infiltrated.
+The modern digital economy is based on reliance on a certain trusted authority. Simply put, the online transactions we make rely on trusting someone to tell us the truth. For example, when we send an email to somebody, we need the provider to tell us that the email is delivered. The point is that we live our life uncertainly in the digital world by relying on a third entity for the security of our digital assets. The bad news is that these so-called third-party sources can be infiltrated.
 
 Blockchain technology has the extensive potential to fundamentally transform the digital world by facilitating a distributed consensus. It means that every single transaction, whether be it past and present, including digital assets, can be checked at any time in the future. Better yet, it implements this without compromising the security of digital assets.
 
@@ -451,14 +451,14 @@ Below we analyze some aspects that link blockchain to cloud computing. We can su
 - #### Blockchain-as-a-Service (BaaS)
   BaaS is a type of blockchain service model that allows blockchain systems or components to be computing resource that can be used for supporting cloud systems or other applications. The major intention of using BaaS is allowing customers to focus on core business rather than struggling with technical obstacles of blockchain. The basic idea of BaaS is that the blockchain network/application is treated as a service offering, on which users are allowed to configure blockchain settings, such as blockchain network types and smart contract rules. Infrastructure for establishing blockchain network is offered by the service provider and partial codes of blockchain are available for open source. 
   
-  For instance Microsoft Azure supports Ethereum, Corda and Hyperledger Fabric for the deployment and configuration of a blockchain network. The Azure’s user only needs configure certain parameters rather than figuring out all technical details. Amazon Web Services (AWS), also, has provided BaaS in their mature and widely-used cloud environment since 2016. AWS’s BaaS can support both Ethereum and Hyperledger.
+For instance, Microsoft Azure supports Ethereum, Corda and Hyperledger Fabric for the deployment and configuration of a blockchain network. The Azure’s user only needs configure certain parameters rather than figuring out all technical details. Amazon Web Services (AWS), also, has provided BaaS in their mature and widely used cloud environment since 2016. AWS’s BaaS can support both Ethereum and Hyperledger.
 
-  In most current blockchain systems, an assumption was made that the demand of the trustful third-party was reduced due to the decentralization setting. Interactions between stakeholders were assumed to be secure no matter whether the stakeholder was trustful. This assumption could be challenged and there could be trust management issues in BaaS because inserting service providers into the blockchain system could cause **"recentralizations"**. One of the reasons was that the service provider could be or had connections with stakeholder(s) so that the blockchain offering might lack of trust. A potential solution was signing a service agreement to restrict activities of CSPs (Cloud Service Providers).
+  In most current blockchain systems, an assumption was made that the demand of the trustful third-party was reduced due to the decentralization setting. Interactions between stakeholders were assumed to be secure no matter whether the stakeholder was trustful. This assumption could be challenged and there could be trust management issues in BaaS because inserting service providers into the blockchain system could cause **"re-centralizations"**. One of the reasons was that the service provider could be or had connections with stakeholder(s) so that the blockchain offering might lack of trust. A potential solution was signing a service agreement to restrict activities of CSPs (Cloud Service Providers).
 
 - #### Blockchain-enabled Data Provenance in Cloud
-  *Provenance* refers to a type of metadata that records and describes operation data. In the scenario of cloud computing, a functional provenance tells **when, where and how** data are stored, accessed, modified and deleted in cloud datacenter.
+  *Provenance* refers to a type of metadata that records and describes operation data. In the scenario of cloud computing, a functional provenance tells **when, where and how** data are stored, accessed, modified, and deleted in cloud datacenter.
   
-  The application of provenance in cloud benefits both CSPs and users. To address providers’ demands, provenance metadata could be utilized to debug, for discovering potential security vulnerabilities,  assist CSPs to identify abnormal process in clouds, e.g., unexpected running applications, which continually consuming resources and so on. On the other hand, from the perspective of users, provenance can protect users data from the threat of malicious insiders and also provides a platform with a function of recording both administrative and malicious operations. A long-run of fulfillment of Service Level Agreement (SLA) can be monitored under the restriction of provenance information.
+  The application of provenance in cloud benefits both CSPs and users. To address providers’ demands, provenance metadata could be utilized to debug, for discovering potential security vulnerabilities, assist CSPs to identify abnormal process in clouds, e.g., unexpected running applications, which continually consuming resources and so on. On the other hand, from the perspective of users, provenance can protect users' data from the threat of malicious insiders and provides a platform with a function of recording both administrative and malicious operations. A long run of fulfillment of Service Level Agreement (SLA) can be monitored under the restriction of provenance information.
   
   Benefits of provenance as discussed above are based on the assumption of metadata that were secure and reliable. However, provenance records still had a chance to be tempered by the threat agent, which could disable/misuse the provenance system.
 
@@ -467,11 +467,11 @@ Below we analyze some aspects that link blockchain to cloud computing. We can su
 - #### Blockchain-based Access Control in Cloud
   Access control was an essential method to provide cloud data security and privacy, which kept cloud data from intrusive and unauthorized users. Traditional access control methodologies in clouds were based on well-established access control policies. An example could be DAC (Discretionary Access Control) where the legitimate user (e.g., service provider) was responsible for determining how other users access to objects (e.g., cloud users).
 
-  In any case, common weakness of traditional access control mechanisms is that they highly rely on a centralization settings, which generally lacks transparency, traceability, tamper-resistance, and multi-party governance.
+  In any case, common weakness of traditional access control mechanisms is that they highly rely on a centralization setting, which lacks transparency, traceability, tamper-resistance, and multi-party governance.
 
-  Differing from traditional access control methods, **Blockchain-based Access Control (BAC)** has a few benefits deriving from characteristics of blockchain. First, BAC introduces consensus into the operation of access control, such that, logically speaking, all stakeholders can be involved during the process. Establishing a consensus generally needs an agreement-level consent made by participant voters or deciders, which strengthens the security from the perspective of the decentralization. Second, traceability supported by blockchain provides a traceable and immutable governance capability for access control.
+  Differing from traditional access control methods, **Blockchain-based Access Control (BAC)** has a few benefits deriving from characteristics of blockchain. First, BAC introduces consensus into the operation of access control, such that, logically speaking, all stakeholders can be involved during the process. Establishing a consensus needs an agreement-level consent made by participant voters or deciders, which strengthens the security from the perspective of the decentralization. Second, traceability supported by blockchain provides a traceable and immutable governance capability for access control.
 
-  A decentralized access control technology powered by blockchain could avoid the risk of single point failure and data misusing caused by third-parties. By applying blockchain technology, data owners could flexibly and completely control the access of their own data.
+  A decentralized access control technology powered by blockchain could avoid the risk of single point failure and data misusing caused by third parties. By applying blockchain technology, data owners could flexibly and completely control the access of their own data.
 
   To conclude, traditional access control methods face challenges in single point failure, unreliable trusted third parity and lack of user’s control. By implementing blockchain technology, users could fully control their data without threat of single point failure. In addition, smart contract provided automatic access management as well as detection and punishment of misbehaviors.
   
@@ -485,7 +485,7 @@ Below we analyze some aspects that link blockchain to cloud computing. We can su
   
   The crucial issue is to determine which data shall be stored in blocks in order to retrieve a great balance between block size and blockchain functionality. 
   
-  Another aspect is using blockchain techniques to facilitate secure data sharing, e.g., healthcare. In the paper of reference it is pointed out the potential hazard caused by centralized data storage and demonstrated a blockchain-based data sharing for securing personal health data.
+  Another aspect is using blockchain techniques to facilitate secure data sharing, e.g., healthcare. In the paper of reference, it is pointed out the potential hazard caused by centralized data storage and demonstrated a blockchain-based data sharing for securing personal health data.
 
   Sun et al. in the study reported in the references, applied off-chain technology to store high amount of EHR (Electronic Health Records) data. In this work, EHR data address was stored on-chain, while the EHR data were encrypted and saved in data owner’s off-chain database. During the sharing process, the data owner firstly signed the EHR data’s address with his attributes. Then the signed address was stored in the blockchain transactions. Users verify the data owner’s signature when retrieving the data.
 
@@ -494,12 +494,12 @@ Below we analyze some aspects that link blockchain to cloud computing. We can su
   
   Differing from traditional blockchain mining, cloud-based mining had an observable advantage. The merit was caused by the centralization setting of clouds, such that both energy saving and efficiency performance could be improved due to the hardware resource optimization. Cloud data center’s processing unit’s computation ability fundamentally determined its PoW executing efficiency.
 
-  There are different cloud mining hardware generation. CPU-based mining was original approach. It provided fully decentralization during PoW consensus but the most used It is maybe GPU miner, though energy costly, offered high amount of hashrate.
+  There are different cloud mining hardware generation. CPU-based mining was original approach. It provided fully decentralization during PoW consensus but the most used It is GPU miner, though energy costly, offered high amount of hashrate.
 
 ## 7. Conclusions <a name="conclusions"></a>
 Security and privacy are certainly the main obstacles to the massive adoption of the Cloud. Being aware of the main problems and threats allows Cloud Consumers on one hand to carefully manage their share of responsibility and, on the other hand, allows Cloud Providers to develop their services by giving increasing importance to security.
 
-Making the Cloud environment a safe and trustworthy environment will allow an increasing number of users to be able to take advantage of the many benefits it offers and therefore allow the realization of ideas and projects that without the Cloud would not have seen a positive conclusion, perhaps at due to large initial investments that the Cloud avoids.
+Making the Cloud environment a safe and trustworthy environment will allow an increasing number of users to be able to take advantage of the many benefits it offers and therefore allow the realization of ideas and projects that without the Cloud would not have seen a positive conclusion, due to large initial investments that the Cloud avoids.
 
 **References**:
  
