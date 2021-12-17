@@ -1,4 +1,14 @@
-# Analysis of security and privacy threats in the cloud, countermeasures adopted and how the blockchain can help
+<p align="center">
+  <h2 align="center">Analysis of security and privacy threats in the cloud, countermeasures adopted and how the blockchain can help</h2>
+    <br>
+  <p align="center">
+    <b>Nicola De Cristofaro - 0522500876</b><br>
+    Data Security course project <br>
+	  Department of Computer Science, Master's Degree, Cloud Computing curriculum <br>
+	  University of Salerno <br>
+    Email: n.decristofaro2@studenti.unisa.it  
+  </p>
+</p>
 
 ### Abstract 
 The Cloud Computing paradigm is considered one of the most important paradigm shifts, in the technological field, in recent years. Its remarkable growth is mainly due to the opportunity it offers users to reduce costs and at the same time increase the efficiency of applications by providing an innovative approach to using services. In fact, one of the key features of the Cloud is the ability to pay only for the resources actually used and thus avoid large initial investments. However, despite the numerous advantages offered, there are still security threats that are perceived as the main obstacle to the massive adoption of the Cloud. In this study we analyze the main security and privacy threats in the Cloud, and the related countermeasures adopted to achieve a reliable Cloud environment. In particular, we will refer to the security mechanisms used by the most used Cloud Providers: Amazon Web Services and Microsoft Azure. Furthermore, a real case study of an attack on a Cloud Provider will be presented with the relative details to understand the level of associated risk, and finally we will make an overview on the use of the blockchain in combination with the Cloud to understand which added values it manages to achieve.
@@ -451,7 +461,7 @@ Below we analyze some aspects that link blockchain to cloud computing. We can su
 - #### Blockchain-as-a-Service (BaaS)
   BaaS is a type of blockchain service model that allows blockchain systems or components to be computing resource that can be used for supporting cloud systems or other applications. The major intention of using BaaS is allowing customers to focus on core business rather than struggling with technical obstacles of blockchain. The basic idea of BaaS is that the blockchain network/application is treated as a service offering, on which users are allowed to configure blockchain settings, such as blockchain network types and smart contract rules. Infrastructure for establishing blockchain network is offered by the service provider and partial codes of blockchain are available for open source. 
   
-For instance, Microsoft Azure supports Ethereum, Corda and Hyperledger Fabric for the deployment and configuration of a blockchain network. The Azure’s user only needs configure certain parameters rather than figuring out all technical details. Amazon Web Services (AWS), also, has provided BaaS in their mature and widely used cloud environment since 2016. AWS’s BaaS can support both Ethereum and Hyperledger.
+  For instance, Microsoft Azure supports Ethereum, Corda and Hyperledger Fabric for the deployment and configuration of a blockchain network. The Azure’s user only needs configure certain parameters rather than figuring out all technical details. Amazon Web Services (AWS), also, has provided BaaS in their mature and widely used cloud environment since 2016. AWS’s BaaS can support both Ethereum and Hyperledger.
 
   In most current blockchain systems, an assumption was made that the demand of the trustful third-party was reduced due to the decentralization setting. Interactions between stakeholders were assumed to be secure no matter whether the stakeholder was trustful. This assumption could be challenged and there could be trust management issues in BaaS because inserting service providers into the blockchain system could cause **"re-centralizations"**. One of the reasons was that the service provider could be or had connections with stakeholder(s) so that the blockchain offering might lack of trust. A potential solution was signing a service agreement to restrict activities of CSPs (Cloud Service Providers).
 
