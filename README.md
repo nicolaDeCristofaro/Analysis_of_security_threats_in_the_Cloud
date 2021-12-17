@@ -96,24 +96,17 @@ We can therefore see that even if in different proportions the Cloud is widespre
 
 - **Reduced initial investment**: like a product wholesaler who buys wholesale goods at lower prices, public cloud providers base their business model on the mass acquisition of IT resources which are then made available to cloud consumers at advantageous prices. This opens the door for organizations to gain access to a powerful infrastructure without having to purchase it themselves.
 
-The most common economic reason for investing in cloud-based IT resources is the reduction or permanent elimination of initial IT investments, i.e. initial hardware and software purchases. This elimination or minimization of initial financial commitments allows companies to start small and consequently increase the allocation of IT resources as needed.
-Furthermore, the reduction of the initial capital allows to redirect the capital towards other core areas of the business.
+  The most common economic reason for investing in cloud-based IT resources is the reduction or permanent elimination of initial IT investments, i.e. initial hardware and software purchases. This elimination or minimization of initial financial commitments allows companies to start small and consequently increase the allocation of IT resources as needed. Furthermore, the reduction of the initial capital allows to redirect the capital towards other core areas of the business.
 
-Other benefits related to cost reduction are:
-  - On-demand access to short-term pay-as-you-go computing resources (such as hourly processors) and the ability to release these computing resources when they are no longer needed.
-  - The perception of having unlimited processing resources available on demand, thus reducing the need for in-depth capacity planning.
-  - The ability to add or remove IT resources at a fine-grained level, for example by changing available storage disk space in single gigabyte increments.
-  - Infrastructure abstraction so that applications are not stuck in devices or locations and can be easily moved if needed.
+  Other benefits related to cost reduction are:
+    - On-demand access to short-term pay-as-you-go computing resources (such as hourly processors) and the ability to release these computing resources when they are no longer needed.
+    - The perception of having unlimited processing resources available on demand, thus reducing the need for in-depth capacity planning.
+    - The ability to add or remove IT resources at a fine-grained level, for example by changing available storage disk space in single gigabyte increments.
+    - Infrastructure abstraction so that applications are not stuck in devices or locations and can be easily moved if needed.
 
 - **Increased Scalability**: Cloud platforms allow you to instantly and dynamically allocate IT resources, on demand. This allows cloud consumers to scale their cloud-based IT resources to meet fluctuations and processing spikes automatically or manually. Likewise, cloud-based IT resources can be released (automatically or manually) as processing demands decrease.
 
 - **Increased Availability and Reliability**: By leveraging cloud environments to make IT resources highly available and reliable, organizations can increase customer service quality guarantees and further reduce or avoid potential business losses arising from unexpected runtime errors.
-
-In particular:
-  - An IT resource with higher availability is accessible for longer periods of time (for example, 22 hours on a 24 hour day). Providers generally offer "resilient" IT resources for which they can guarantee high levels of availability.
-  - A more reliable IT resource can avoid and recover exceptional failure situations. The modular architecture of cloud environments provides extensive failover support that increases reliability.
-
-It is important for organizations to carefully review the SLAs offered by cloud service providers when considering leasing cloud-based services and IT resources.
 
 ## 2. Security and Privacy threats in the Cloud <a name="chap2"></a>
 
@@ -186,7 +179,7 @@ If physical IT assets within a cloud are shared by multiple consumers of cloud s
 
 Malicious cloud consumers can target shared IT resources with the intention of compromising other consumers. The consequence is that some or all of the other consumers of cloud services could be affected by the attack and the attacker could use virtual IT resources of users with whom they share the same border of trust.
   
-### Privacy and Data Protection
+#### Privacy and Data Protection
 Privacy is a core issue in all the challenges we’ve discussed so far. Many organizations aren’t comfortable storing their data and applications on systems that reside outside of their on-premises datacenters. This might be the single greatest fear of cloud clients. By migrating workloads to a shared infrastructure, customers’ confidential information faces increased risk of potential unauthorized access and exposure. 
 
 Cloud service providers must assure their customers and provide a high degree of transparency into their operations and privacy assurance. Privacy-protection mechanisms must be embedded in all security solutions. 
