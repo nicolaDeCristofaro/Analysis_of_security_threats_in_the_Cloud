@@ -60,8 +60,8 @@ The Cloud Computing paradigm is considered one of the most important paradigm sh
 - [Corrective mitigation actions](#corrective-mitigation)
 
 ### 6. [Blockchain and Cloud Security](#chap6)
-- [What is blockchain technology?](#what-is-blockchain-technology)
-- [Where blockchain technology comes handy?](#where-blockchain-technology-comes-handy)
+- [What is blockchain?](#what-is-blockchain)
+- [Features of Blockchain](#features-of-blockchain)
 - [Blockchain security and Cloud Computing](#blockchain-security-and-cloud-computing)
   - Blockchain-as-a-Service (BaaS)
   - Blockchain-enabled Data Provenance in Cloud
@@ -408,7 +408,7 @@ This is a real-world case study attack cited in the Top Threats Deep Dive for it
 
 #### Technical Impacts
 - **Data Breach**: The attackers were able to gain access to AWS S3 buckets housing intellectual property related to internally used engineering test cars.
-- **Malware infection**: The intrusion allowed the attackers to install evasive cryptocurrency mining scripts. In addition to steaking computing resources, these nefarious scripts provide an avenue for attackers to persist within the environment if not properly detected and remediated
+- **Malware infection**: The intrusion allowed the attackers to install evasive cryptocurrency mining scripts. In addition to stealing computing resources, these nefarious scripts provide an avenue for attackers to persist within the environment if not properly detected and remediated
 
 #### Business Impacts
 - **Financial**: Increases in the cost of cloud computing resources could be realized depending on the length of time the attackers spent mining crypto currency within the compromised network: risk of exfiltrating and selling valuable intellectual property to highest bidding competitor.
@@ -435,21 +435,34 @@ This is a real-world case study attack cited in the Top Threats Deep Dive for it
 
 
 ## 6. Blockchain and Cloud Security <a name="chap6"></a>
+Let's now introduce the concept of Blockchain and then let's see how this technology can help security management in a Cloud environment.
 
-#### What is blockchain technology?
-The concept of blockchain gained mainstream attention in 2017. In simple terms, blockchain is a technology that enables data to be stored and transferred on a peer-to-peer basis. It can also be compared to a bank ledger holding transactions. It stores information about date, time, and amount of money, etc. It’s used in a ‘decentralised’ manner, and it eliminates the need for ‘trusted third parties. The blockchain network doesn’t have any central authority.
+#### What is blockchain?
+As the name suggests, blockchain is a chain of blocks that contains information. Each block consists of a number of transactions and each transaction is recorded in the form of Hash. Hash is a unique address assigned to each block during its creation and any further modification in the block will lead to a change in its hash.
 
-A particular property of the blockchain is: *"The data structure in a blockchain is append-only: the data cannot be modified or deleted"*.
+A block has mainly 3 parts:
 
-#### Where blockchain technology comes handy?
-The modern digital economy is based on reliance on a certain trusted authority. Simply put, the online transactions we make rely on trusting someone to tell us the truth. For example, when we send an email to somebody, we need the provider to tell us that the email is delivered. The point is that we live our life uncertainly in the digital world by relying on a third entity for the security of our digital assets. The bad news is that these so-called third-party sources can be infiltrated.
+1. **Data/Information part**- contains the information of the transaction incurred
+2. **Hash**- Unique ID of block
+3. **Previous Hash**- Hash of previous block
+  
+<img src="./images/blockchain_structure.jpg">
 
-Blockchain technology has the extensive potential to fundamentally transform the digital world by facilitating a distributed consensus. It means that every single transaction, whether be it past and present, including digital assets, can be checked at any time in the future. Better yet, it implements this without compromising the security of digital assets.
+Since in a Blockchain, every block has the hash of its previous block, therefore if anyone tries to tamper the data in some block then the hash of the block will be changed. So he will have to change the ‘Previous hash’ of next block. In doing so, the present hash of the next block will also change. Eventually the intruder will have to change the hashes of every block in the Blockchain which is not easy at all. Hence, **the data in the Blockchain is tamper proof and maintains its authenticity**.
+
+#### Features of Blockchain
+1. Data stored in blockchain is **immutable**. Also the data is added to the block after it is approved by everyone in the network, or more precisely when the consensus was reached, and thus allowing secure transactions. Those who validate the transactions and add them in block are called **miners** because they usually have a reward in exchange for their validation work.
+
+2. **Blockchain is based on a peer to peer network**. In other words, the Blockchain is Decentralized. It is based on the "Ledger" that records all the transactions done. No individual or any organisation is in charge of the transactions. This characteristic of blockchain allows the transactions to involve only two parties, the sender and the receiver. Thus it removes the requirement of ‘third party authorization’ because everyone in the network is themselves able to authorise the transactions.
+
+3. **Public verifiability**. Because the ledger is visible to everyone (also called "open ledger") each transaction can be verified by each participant (through the use of Merkle Hash trees). *Each and every connection in the blockchain network has a copy (the same copy) of the ledger*.
+
+4. **Privacy**: the identity of the person carrying out a specific transaction must be protected (usually by anonymizing the transactions)
 
 #### Blockchain security and Cloud Computing
 Fusing blockchain technology with existing cloud system has a great potential in both functionality/performance enhancement and security/privacy improvement. The question remains on how can we use blockchain and cloud computing for additional value creation? How blockchain technology inserts into current deployed cloud solutions and enables the reengineering of cloud datacenter?
 
-Below we analyze some aspects that link blockchain to cloud computing. We can summarize them in this scheme:
+Below we analyze some aspects that link blockchain to cloud computing.
 
 - #### Blockchain-as-a-Service (BaaS)
   BaaS is a type of blockchain service model that allows blockchain systems or components to be computing resource that can be used for supporting cloud systems or other applications. The major intention of using BaaS is allowing customers to focus on core business rather than struggling with technical obstacles of blockchain. The basic idea of BaaS is that the blockchain network/application is treated as a service offering, on which users are allowed to configure blockchain settings, such as blockchain network types and smart contract rules. Infrastructure for establishing blockchain network is offered by the service provider and partial codes of blockchain are available for open source. 
@@ -463,9 +476,9 @@ Below we analyze some aspects that link blockchain to cloud computing. We can su
   
   The application of provenance in cloud benefits both CSPs and users. To address providers’ demands, provenance metadata could be utilized to debug, for discovering potential security vulnerabilities, assist CSPs to identify abnormal process in clouds, e.g., unexpected running applications, which continually consuming resources and so on. On the other hand, from the perspective of users, provenance can protect users' data from the threat of malicious insiders and provides a platform with a function of recording both administrative and malicious operations. A long run of fulfillment of Service Level Agreement (SLA) can be monitored under the restriction of provenance information.
   
-  Benefits of provenance as discussed above are based on the assumption of metadata that were secure and reliable. However, provenance records still had a chance to be tempered by the threat agent, which could disable/misuse the provenance system.
+  Benefits of provenance as discussed above are based on the assumption of metadata that were secure and reliable. However, provenance records still had a chance to be tampered by the threat agent, which could disable/misuse the provenance system.
 
-  **As a temper-resistant distributed ledger, blockchain could ensure the security of provenance data.** The basic idea of blockchain-based data provenance is using blockchain’s characteristic in traceability to record each activity happened to data on blocks.
+  **As a tamper-resistant distributed ledger, blockchain could ensure the security of provenance data.** The basic idea of blockchain-based data provenance is using blockchain’s characteristic in traceability to record each activity happened to data on blocks.
 
 - #### Blockchain-based Access Control in Cloud
   Access control was an essential method to provide cloud data security and privacy, which kept cloud data from intrusive and unauthorized users. Traditional access control methodologies in clouds were based on well-established access control policies. An example could be DAC (Discretionary Access Control) where the legitimate user (e.g., service provider) was responsible for determining how other users access to objects (e.g., cloud users).
@@ -482,7 +495,7 @@ Below we analyze some aspects that link blockchain to cloud computing. We can su
   Despite benefits of blockchain system in security, transparency and fault-tolerance, blockchain-based applications frequently needed a powerful backend service supports. Most blockchain systems utilized PoW consensus. Since the invention of Bitcoin, PoW had been a major consensus mechanism in blockchain system. In PoW mechanism, miners scramble the right of packaging block by solving a cryptographic puzzle. Although PoW provides high fault tolerance and security, it is computational exhausted to each node in the blockchain network. Portable communication devices, such as mobile smart phone, could not be deployed by PoW blockchain due to its constrained computation ability. Outsourcing this cryptographic puzzle game can be a solution in this scenario. 
 
 - #### Cloud Storage Offloading for Blockchain
-  Although blockchain was capable of storing temper-resistant data on-chain, blockchain’s storage capability was limited. For example, Bitcoin’s block size was only 1MB, which cannot used to storage large volume of data. Meanwhile, storing high amount of data on-chain could lead the full node size of the blockchain network intolerable high to PC and mobile users. Thus, off-chain storage technology was introduced to tackle this challenge. Cloud service Providers offer storage-as-a-service as a scalable off chain solution to users.
+  Although blockchain was capable of storing tamper-resistant data on-chain, blockchain’s storage capability was limited. For example, Bitcoin’s block size was only 1MB, which cannot used to storage large volume of data. Meanwhile, storing high amount of data on-chain could lead the full node size of the blockchain network intolerable high to PC and mobile users. Thus, off-chain storage technology was introduced to tackle this challenge. Cloud service Providers offer storage-as-a-service as a scalable off chain solution to users.
 
   Using cloud storage is an alternative method for reinforcing blockchain systems, from the perspective of mass data storage, which reduces the restriction caused by the limited storage space of blocks. 
   
